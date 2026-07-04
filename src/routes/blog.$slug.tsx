@@ -1,6 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { PostLayout } from "@/components/mojo/PostLayout";
 import { getPost } from "@/lib/blog-content";
+import { pageHead, articleJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -10,43 +11,30 @@ export const Route = createFileRoute("/blog/$slug")({
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) {
-      return {
-        meta: [
-          { title: "Not found — Mojo" },
-          { name: "robots", content: "noindex" },
-        ],
-      };
+      return pageHead({
+        path: `/blog/${params.slug}`,
+        title: "Not found — Mojo",
+        description: "That note isn't here.",
+        robots: "noindex",
+      });
     }
     const { post } = loaderData;
-    const url = `https://mojo-stream-reach.lovable.app/blog/${params.slug}`;
-    return {
-      meta: [
-        { title: post.seoTitle },
-        { name: "description", content: post.seoDescription },
-        { property: "og:title", content: post.meta.title },
-        { property: "og:description", content: post.seoDescription },
-        { property: "og:type", content: "article" },
-        { property: "og:url", content: url },
-        { property: "article:published_time", content: post.meta.date },
-        { name: "twitter:title", content: post.meta.title },
-        { name: "twitter:description", content: post.seoDescription },
+    const path = `/blog/${params.slug}`;
+    return pageHead({
+      path,
+      title: post.seoTitle,
+      description: post.seoDescription,
+      ogType: "article",
+      jsonLd: [
+        articleJsonLd({
+          title: post.meta.title,
+          description: post.seoDescription,
+          path,
+          datePublished: post.meta.date,
+          author: post.meta.author,
+        }),
       ],
-      links: [{ rel: "canonical", href: url }],
-      scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: post.meta.title,
-            description: post.seoDescription,
-            author: { "@type": "Organization", name: "Mojo" },
-            datePublished: post.meta.date,
-            mainEntityOfPage: url,
-          }),
-        },
-      ],
-    };
+    });
   },
   component: PostPage,
   notFoundComponent: PostNotFound,
