@@ -58,6 +58,7 @@ export function PostLayout({ post, children }: Props) {
                   to="/blog/$slug"
                   params={{ slug: r.slug }}
                   className="group block rounded-lg bg-mojo-cream border border-mojo-border p-6 hover:border-mojo-clay transition-colors"
+                  preload="intent"
                 >
                   <div className="text-xs uppercase tracking-[0.18em] text-mojo-mute">
                     {r.dateLabel}
