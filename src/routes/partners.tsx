@@ -1,6 +1,15 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { z } from "zod";
 import { PageShell } from "@/components/mojo/PageShell";
+import {
+  Honeypot,
+  StatusRegion,
+  SubmitButton,
+  TextAreaInput,
+  TextInput,
+} from "@/components/mojo/form-fields";
+import { useLeadForm } from "@/lib/use-lead-form";
 
 export const Route = createFileRoute("/partners")({
   head: () => ({
@@ -40,8 +49,41 @@ const terms = [
   },
 ];
 
+const schema = z.object({
+  name: z.string().trim().min(1, "Your name is required").max(200),
+  company: z.string().trim().min(1, "Agency name is required").max(200),
+  email: z.string().trim().email("Please enter a valid email").max(320),
+  message: z.string().trim().max(5000).optional(),
+});
+
 function PartnersPage() {
-  const [submitted, setSubmitted] = useState(false);
+  const { status, errorMessage, submit } = useLeadForm("partner");
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const raw = Object.fromEntries(fd.entries()) as Record<string, string>;
+    const parsed = schema.safeParse(raw);
+    if (!parsed.success) {
+      const next: Record<string, string> = {};
+      for (const issue of parsed.error.issues) {
+        next[String(issue.path[0])] = issue.message;
+      }
+      setErrors(next);
+      return;
+    }
+    setErrors({});
+    await submit(
+      {
+        name: parsed.data.name,
+        company: parsed.data.company,
+        email: parsed.data.email,
+        message: parsed.data.message || null,
+      },
+      { honeypot: raw.company_website || "" },
+    );
+  }
 
   return (
     <PageShell>
@@ -98,82 +140,44 @@ function PartnersPage() {
           </p>
 
           <div className="mt-10 rounded-lg border border-mojo-border bg-mojo-cream-2 p-6 md:p-10">
-            {submitted ? (
-              <div className="text-center py-8">
-                <h3 className="font-display text-2xl text-mojo-ink">
-                  Thanks — we'll be in touch.
-                </h3>
-                <p className="mt-3 text-mojo-mute">
-                  Expect a note within one business day.
-                </p>
-                <Link
-                  to="/"
-                  className="mt-6 inline-flex items-center rounded-md bg-mojo-clay px-4 py-2 text-sm font-medium text-mojo-cream hover:bg-mojo-clay-deep transition-colors"
-                >
-                  Back home
-                </Link>
-              </div>
-            ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSubmitted(true);
-                }}
-                className="space-y-5"
-              >
-                <PField label="Your name" name="name" required />
-                <PField label="Agency" name="agency" required />
-                <PField label="Email" name="email" type="email" required />
-                <div>
-                  <label htmlFor="note" className="text-sm font-medium text-mojo-ink">
-                    Note (optional)
-                  </label>
-                  <textarea
-                    id="note"
-                    name="note"
-                    rows={4}
-                    placeholder="Client types, markets, or anything else worth knowing."
-                    className="mt-2 block w-full rounded-md border border-mojo-border bg-mojo-cream px-3 py-2 text-mojo-ink placeholder:text-mojo-mute focus:outline-none focus:ring-2 focus:ring-mojo-clay focus:border-mojo-clay"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full inline-flex items-center justify-center rounded-md bg-mojo-clay px-6 py-3 text-sm font-medium text-mojo-cream hover:bg-mojo-clay-deep transition-colors"
-                >
-                  Start the conversation
-                </button>
-              </form>
-            )}
+            <form onSubmit={onSubmit} className="space-y-5" noValidate>
+              <Honeypot />
+              <TextInput
+                name="name"
+                label="Your name"
+                required
+                autoComplete="name"
+                error={errors.name}
+              />
+              <TextInput
+                name="company"
+                label="Agency"
+                required
+                autoComplete="organization"
+                error={errors.company}
+              />
+              <TextInput
+                name="email"
+                label="Email"
+                type="email"
+                required
+                autoComplete="email"
+                error={errors.email}
+              />
+              <TextAreaInput
+                name="message"
+                label="Note (optional)"
+                placeholder="Client types, markets, or anything else worth knowing."
+                error={errors.message}
+              />
+              <SubmitButton submitting={status === "submitting"} className="w-full">
+                Start the conversation
+              </SubmitButton>
+              <StatusRegion status={status} errorMessage={errorMessage} />
+            </form>
           </div>
         </div>
       </section>
     </PageShell>
-  );
-}
-
-function PField({
-  label,
-  name,
-  type = "text",
-  required,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <div>
-      <label htmlFor={name} className="text-sm font-medium text-mojo-ink">
-        {label}
-      </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        required={required}
-        className="mt-2 block w-full rounded-md border border-mojo-border bg-mojo-cream px-3 py-2 text-mojo-ink placeholder:text-mojo-mute focus:outline-none focus:ring-2 focus:ring-mojo-clay focus:border-mojo-clay"
-      />
-    </div>
   );
 }

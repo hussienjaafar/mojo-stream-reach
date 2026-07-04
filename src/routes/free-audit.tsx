@@ -1,6 +1,15 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { z } from "zod";
 import { PageShell } from "@/components/mojo/PageShell";
+import {
+  Honeypot,
+  SelectInput,
+  StatusRegion,
+  SubmitButton,
+  TextInput,
+} from "@/components/mojo/form-fields";
+import { useLeadForm } from "@/lib/use-lead-form";
 
 export const Route = createFileRoute("/free-audit")({
   head: () => ({
@@ -34,12 +43,12 @@ const industries = [
 ];
 
 const budgets = [
-  "Under $5,000 / month",
-  "$5,000 – $10,000 / month",
-  "$10,000 – $25,000 / month",
-  "$25,000 – $50,000 / month",
-  "$50,000+ / month",
-  "Not sure yet",
+  { value: "under-5k", label: "Under $5,000 / month" },
+  { value: "5k-10k", label: "$5,000 – $10,000 / month" },
+  { value: "10k-25k", label: "$10,000 – $25,000 / month" },
+  { value: "25k-50k", label: "$25,000 – $50,000 / month" },
+  { value: "50k-plus", label: "$50,000+ / month" },
+  { value: "unsure", label: "Not sure yet" },
 ];
 
 const includes = [
@@ -49,8 +58,47 @@ const includes = [
   "A one-page plan you can walk into any meeting with",
 ];
 
+const schema = z.object({
+  name: z.string().trim().min(1, "Your name is required").max(200),
+  company: z.string().trim().min(1, "Company is required").max(200),
+  industry: z.string().min(1, "Please choose one"),
+  budget_range: z.string().min(1, "Please choose a range"),
+  website: z.string().trim().url("Please include https://").max(500),
+  email: z.string().trim().email("Please enter a valid email").max(320),
+  phone: z.string().trim().max(50).optional(),
+});
+
 function FreeAuditPage() {
-  const [submitted, setSubmitted] = useState(false);
+  const { status, errorMessage, submit } = useLeadForm("audit");
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const raw = Object.fromEntries(fd.entries()) as Record<string, string>;
+    const parsed = schema.safeParse(raw);
+    if (!parsed.success) {
+      const next: Record<string, string> = {};
+      for (const issue of parsed.error.issues) {
+        next[String(issue.path[0])] = issue.message;
+      }
+      setErrors(next);
+      return;
+    }
+    setErrors({});
+    await submit(
+      {
+        name: parsed.data.name,
+        company: parsed.data.company,
+        industry: parsed.data.industry,
+        budget_range: parsed.data.budget_range,
+        website: parsed.data.website,
+        email: parsed.data.email,
+        phone: parsed.data.phone || null,
+      },
+      { honeypot: raw.company_website || "" },
+    );
+  }
 
   return (
     <PageShell>
@@ -109,130 +157,73 @@ function FreeAuditPage() {
           </div>
 
           <div className="rounded-lg border border-mojo-border bg-mojo-cream-2 p-6 md:p-10">
-            {submitted ? (
-              <div className="text-center py-8">
-                <h3 className="font-display text-2xl text-mojo-ink">
-                  Got it — thank you.
-                </h3>
-                <p className="mt-3 text-mojo-mute">
-                  We'll reply within one business day with next steps.
-                </p>
-                <Link
-                  to="/"
-                  className="mt-6 inline-flex items-center rounded-md bg-mojo-clay px-4 py-2 text-sm font-medium text-mojo-cream hover:bg-mojo-clay-deep transition-colors"
-                >
-                  Back home
-                </Link>
-              </div>
-            ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSubmitted(true);
-                }}
-                className="space-y-5"
-              >
-                <Field label="Your name" name="name" required />
-                <Field label="Company" name="company" required />
+            <form onSubmit={onSubmit} className="space-y-5" noValidate>
+              <Honeypot />
+              <TextInput
+                name="name"
+                label="Your name"
+                required
+                autoComplete="name"
+                error={errors.name}
+              />
+              <TextInput
+                name="company"
+                label="Company"
+                required
+                autoComplete="organization"
+                error={errors.company}
+              />
+              <SelectInput
+                name="industry"
+                label="Industry"
+                required
+                options={industries}
+                error={errors.industry}
+              />
+              <SelectInput
+                name="budget_range"
+                label="Monthly marketing budget"
+                required
+                options={budgets}
+                placeholder="Select a range"
+                error={errors.budget_range}
+              />
+              <TextInput
+                name="website"
+                label="Website"
+                type="url"
+                required
+                placeholder="https://"
+                autoComplete="url"
+                error={errors.website}
+              />
+              <TextInput
+                name="email"
+                label="Email"
+                type="email"
+                required
+                autoComplete="email"
+                error={errors.email}
+              />
+              <TextInput
+                name="phone"
+                label="Phone (optional)"
+                type="tel"
+                autoComplete="tel"
+                error={errors.phone}
+              />
 
-                <div>
-                  <Label htmlFor="industry">Industry</Label>
-                  <select
-                    id="industry"
-                    name="industry"
-                    required
-                    defaultValue=""
-                    className={selectClasses}
-                  >
-                    <option value="" disabled>
-                      Select one
-                    </option>
-                    {industries.map((i) => (
-                      <option key={i.value} value={i.value}>
-                        {i.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <Label htmlFor="budget">Monthly marketing budget</Label>
-                  <select
-                    id="budget"
-                    name="budget"
-                    required
-                    defaultValue=""
-                    className={selectClasses}
-                  >
-                    <option value="" disabled>
-                      Select a range
-                    </option>
-                    {budgets.map((b) => (
-                      <option key={b} value={b}>
-                        {b}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <Field label="Website" name="website" type="url" required placeholder="https://" />
-                <Field label="Email" name="email" type="email" required />
-                <Field label="Phone (optional)" name="phone" type="tel" />
-
-                <button
-                  type="submit"
-                  className="w-full inline-flex items-center justify-center rounded-md bg-mojo-clay px-6 py-3 text-sm font-medium text-mojo-cream hover:bg-mojo-clay-deep transition-colors"
-                >
-                  Request my audit
-                </button>
-                <p className="text-center text-xs text-mojo-mute">
-                  We reply within one business day.
-                </p>
-              </form>
-            )}
+              <SubmitButton submitting={status === "submitting"} className="w-full">
+                Request my audit
+              </SubmitButton>
+              <p className="text-center text-xs text-mojo-mute">
+                We reply within one business day.
+              </p>
+              <StatusRegion status={status} errorMessage={errorMessage} />
+            </form>
           </div>
         </div>
       </section>
     </PageShell>
-  );
-}
-
-const inputClasses =
-  "mt-2 block w-full rounded-md border border-mojo-border bg-mojo-cream px-3 py-2 text-mojo-ink placeholder:text-mojo-mute focus:outline-none focus:ring-2 focus:ring-mojo-clay focus:border-mojo-clay";
-const selectClasses = inputClasses;
-
-function Label({ htmlFor, children }: { htmlFor: string; children: React.ReactNode }) {
-  return (
-    <label htmlFor={htmlFor} className="text-sm font-medium text-mojo-ink">
-      {children}
-    </label>
-  );
-}
-
-function Field({
-  label,
-  name,
-  type = "text",
-  required,
-  placeholder,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-  placeholder?: string;
-}) {
-  return (
-    <div>
-      <Label htmlFor={name}>{label}</Label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        required={required}
-        placeholder={placeholder}
-        className={inputClasses}
-      />
-    </div>
   );
 }
