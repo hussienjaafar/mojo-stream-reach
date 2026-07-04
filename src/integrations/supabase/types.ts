@@ -14,7 +14,69 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      leads: {
+        Row: {
+          budget_range: string | null
+          company: string | null
+          created_at: string
+          email: string | null
+          form_source: Database["public"]["Enums"]["lead_source"]
+          id: string
+          industry: string | null
+          landing_page: string | null
+          message: string | null
+          name: string | null
+          phone: string | null
+          referrer: string | null
+          utm_campaign: string | null
+          utm_content: string | null
+          utm_medium: string | null
+          utm_source: string | null
+          utm_term: string | null
+          website: string | null
+        }
+        Insert: {
+          budget_range?: string | null
+          company?: string | null
+          created_at?: string
+          email?: string | null
+          form_source: Database["public"]["Enums"]["lead_source"]
+          id?: string
+          industry?: string | null
+          landing_page?: string | null
+          message?: string | null
+          name?: string | null
+          phone?: string | null
+          referrer?: string | null
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
+          website?: string | null
+        }
+        Update: {
+          budget_range?: string | null
+          company?: string | null
+          created_at?: string
+          email?: string | null
+          form_source?: Database["public"]["Enums"]["lead_source"]
+          id?: string
+          industry?: string | null
+          landing_page?: string | null
+          message?: string | null
+          name?: string | null
+          phone?: string | null
+          referrer?: string | null
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
+          website?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +85,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      lead_source: "audit" | "partner" | "contact"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +212,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      lead_source: ["audit", "partner", "contact"],
+    },
   },
 } as const
