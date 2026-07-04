@@ -11,6 +11,11 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import {
+  ORGANIZATION_JSONLD,
+  LOCAL_BUSINESS_JSONLD,
+  OG_IMAGE,
+} from "../lib/seo";
 
 function NotFoundComponent() {
   return (
