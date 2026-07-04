@@ -11,26 +11,16 @@ import {
 } from "@/components/mojo/form-fields";
 import { useLeadForm } from "@/lib/use-lead-form";
 
+import { pageHead } from "@/lib/seo";
+
 export const Route = createFileRoute("/free-audit")({
-  head: () => ({
-    meta: [
-      { title: "Free streaming TV readiness audit | Mojo" },
-      {
-        name: "description",
-        content:
-          "A real document, built by a human: what streaming TV would cost in your Michigan market, which inventory fits your customers, and whether your creative can convert. No obligation.",
-      },
-      { property: "og:title", content: "Free streaming TV readiness audit | Mojo" },
-      {
-        property: "og:description",
-        content:
-          "We'll map your market, your inventory fit, and your creative. Human-built, no obligation.",
-      },
-    ],
-    links: [
-      { rel: "canonical", href: "https://mojo-stream-reach.lovable.app/free-audit" },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      path: "/free-audit",
+      title: "Free streaming TV readiness audit | Mojo",
+      description:
+        "A real document, built by a human: what streaming TV would cost in your Michigan market, which inventory fits your customers, and whether your creative can convert. No obligation.",
+    }),
   component: FreeAuditPage,
 });
 
