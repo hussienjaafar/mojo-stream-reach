@@ -1,24 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/mojo/PageShell";
 import { CTABand } from "@/components/mojo/CTABand";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Mojo — Political-media discipline for Michigan businesses" },
-      {
-        name: "description",
-        content:
-          "Founded on the discipline of political and advocacy media, Mojo brings a national streaming TV track record — and an in-house creative studio — to Michigan businesses.",
-      },
-      { property: "og:title", content: "About Mojo" },
-      {
-        property: "og:description",
-        content:
-          "The discipline of political media. Working for your business.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      path: "/about",
+      title: "About Mojo — Political-media discipline for Michigan businesses",
+      description:
+        "Founded on the discipline of political and advocacy media, Mojo brings a national streaming TV track record — and an in-house creative studio — to Michigan businesses.",
+    }),
   component: AboutPage,
 });
 
