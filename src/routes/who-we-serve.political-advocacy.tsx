@@ -82,7 +82,7 @@ function PoliticalAdvocacyPage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-24">
           <div className="max-w-3xl mojo-fade-up">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Political & advocacy
             </div>
             <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-mojo-ink">
@@ -107,7 +107,7 @@ function PoliticalAdvocacyPage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Capabilities
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">
@@ -134,7 +134,7 @@ function PoliticalAdvocacyPage() {
       <section className="bg-mojo-cream-2 border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Case studies
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">
@@ -143,7 +143,7 @@ function PoliticalAdvocacyPage() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             <div className="rounded-xl bg-mojo-cream border border-mojo-border p-8">
-              <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+              <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
                 TODO-PERMISSION
               </div>
               <h3 className="mt-3 font-display text-2xl text-mojo-ink">
@@ -154,7 +154,7 @@ function PoliticalAdvocacyPage() {
               </p>
             </div>
             <div className="rounded-xl bg-mojo-cream border border-mojo-border p-8">
-              <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+              <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
                 TODO-PERMISSION
               </div>
               <h3 className="mt-3 font-display text-2xl text-mojo-ink">
@@ -172,7 +172,7 @@ function PoliticalAdvocacyPage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-3xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Market context
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">
@@ -204,7 +204,7 @@ function PoliticalAdvocacyPage() {
       {/* 5. FAQ */}
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-3xl px-6 py-24">
-          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
             Questions
           </div>
           <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">

@@ -18,7 +18,7 @@ export function PostLayout({ post, children }: Props) {
           <div className="mojo-fade-up">
             <Link
               to="/blog"
-              className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium hover:text-mojo-clay-deep"
+              className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium hover:text-mojo-clay-deep"
             >
               ← Field notes
             </Link>
@@ -45,7 +45,7 @@ export function PostLayout({ post, children }: Props) {
       {related.length > 0 && (
         <section className="bg-mojo-cream-2 border-b border-mojo-border">
           <div className="mx-auto max-w-5xl px-6 py-20">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Keep reading
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-4xl text-mojo-ink">

@@ -21,7 +21,7 @@ export function PlaceholderPage({
     <PageShell>
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-4xl px-6 py-24 md:py-32">
-          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
             {eyebrow}
           </div>
           <h1 className="mt-5 font-display text-4xl md:text-6xl text-mojo-ink leading-[1.05]">

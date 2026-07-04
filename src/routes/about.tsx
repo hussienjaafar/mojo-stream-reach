@@ -39,7 +39,7 @@ function AboutPage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-24">
           <div className="max-w-3xl mojo-fade-up">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               About Mojo
             </div>
             <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-mojo-ink">
@@ -72,7 +72,7 @@ function AboutPage() {
           {/* Narrative */}
           <div className="md:col-span-3 space-y-8 text-mojo-ink/85 text-base md:text-lg leading-relaxed">
             <div>
-              <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+              <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
                 Where we come from
               </div>
               <p className="mt-4">
@@ -81,7 +81,7 @@ function AboutPage() {
             </div>
 
             <div>
-              <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+              <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
                 What we did there
               </div>
               <p className="mt-4">
@@ -90,7 +90,7 @@ function AboutPage() {
             </div>
 
             <div>
-              <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+              <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
                 Why Mojo, why now
               </div>
               <p className="mt-4">
@@ -105,7 +105,7 @@ function AboutPage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               What we stand for
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">

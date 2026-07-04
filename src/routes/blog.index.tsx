@@ -22,7 +22,7 @@ function BlogIndex() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-20">
           <div className="max-w-3xl mojo-fade-up">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Field notes
             </div>
             <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] text-mojo-ink">

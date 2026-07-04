@@ -54,7 +54,7 @@ function ThankYouPage() {
     <PageShell>
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-3xl px-6 pt-24 pb-20 md:pt-32 md:pb-24 text-center">
-          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
             Thank you
           </div>
           <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] text-mojo-ink">
@@ -69,7 +69,7 @@ function ThankYouPage() {
 
       <section className="bg-mojo-cream-2 border-b border-mojo-border">
         <div className="mx-auto max-w-5xl px-6 py-20">
-          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
             While you wait
           </div>
           <h2 className="mt-4 font-display text-3xl md:text-4xl text-mojo-ink leading-tight max-w-2xl">
