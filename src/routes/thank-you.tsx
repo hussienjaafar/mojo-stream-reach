@@ -39,6 +39,18 @@ function ThankYouPage() {
         event: "lead_submitted",
         form_source: label,
       });
+      // GA4 direct (gtag)
+      // @ts-expect-error gtag is provider-injected
+      if (typeof window.gtag === "function") {
+        // @ts-expect-error gtag is provider-injected
+        window.gtag("event", "lead_submitted", { form_source: label });
+      }
+      // Meta Pixel
+      // @ts-expect-error fbq is provider-injected
+      if (typeof window.fbq === "function") {
+        // @ts-expect-error fbq is provider-injected
+        window.fbq("track", "Lead", { form_source: label });
+      }
       // Plausible
       // @ts-expect-error plausible is provider-injected
       if (typeof window.plausible === "function") {
