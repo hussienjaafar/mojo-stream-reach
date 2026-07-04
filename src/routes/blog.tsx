@@ -2,25 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/mojo/PageShell";
 import { CTABand } from "@/components/mojo/CTABand";
 import { blogPosts } from "@/lib/blog-posts";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog")({
-  head: () => ({
-    meta: [
-      { title: "Field notes — Plain answers about TV advertising | Mojo" },
-      {
-        name: "description",
-        content:
-          "Straight talk about streaming TV: what it costs, what platforms hide, and how to buy it well. No jargon, no fluff.",
-      },
-      { property: "og:title", content: "Field notes — Mojo" },
-      {
-        property: "og:description",
-        content:
-          "Plain-spoken guidance on streaming TV advertising for mid-market businesses.",
-      },
-    ],
-    links: [{ rel: "canonical", href: "https://mojo-stream-reach.lovable.app/blog" }],
-  }),
+  head: () =>
+    pageHead({
+      path: "/blog",
+      title: "Field notes — Plain answers about TV advertising | Mojo",
+      description:
+        "Straight talk about streaming TV: what it costs, what platforms hide, and how to buy it well. No jargon, no fluff.",
+    }),
   component: BlogIndex,
 });
 
