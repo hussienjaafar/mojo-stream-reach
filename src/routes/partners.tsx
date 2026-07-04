@@ -11,26 +11,16 @@ import {
 } from "@/components/mojo/form-fields";
 import { useLeadForm } from "@/lib/use-lead-form";
 
+import { pageHead } from "@/lib/seo";
+
 export const Route = createFileRoute("/partners")({
-  head: () => ({
-    meta: [
-      { title: "Referral partners — Send us a client, get paid for a year | Mojo" },
-      {
-        name: "description",
-        content:
-          "For web, SEO, and marketing shops: 10% of first-year fees on any client you refer to Mojo. We never poach your services. Co-branded reporting available.",
-      },
-      { property: "og:title", content: "Partners — Mojo referral program" },
-      {
-        property: "og:description",
-        content:
-          "10% of first-year fees. No poaching. Co-branded reporting on request.",
-      },
-    ],
-    links: [
-      { rel: "canonical", href: "https://mojo-stream-reach.lovable.app/partners" },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      path: "/partners",
+      title: "Referral partners — Send us a client, get paid for a year | Mojo",
+      description:
+        "For web, SEO, and marketing shops: 10% of first-year fees on any client you refer to Mojo. We never poach your services. Co-branded reporting available.",
+    }),
   component: PartnersPage,
 });
 

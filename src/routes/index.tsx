@@ -2,18 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/mojo/PageShell";
 import { CTABand } from "@/components/mojo/CTABand";
 import { TVFrame } from "@/components/mojo/TVFrame";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Mojo — Streaming TV advertising for mid-market businesses" },
-      {
-        name: "description",
-        content:
-          "Your ad on live sports and premium streaming shows — shown only to the households you choose, measured like the rest of your marketing.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      path: "/",
+      title: "Mojo — Streaming TV advertising for mid-market businesses",
+      description:
+        "Your ad on live sports and premium streaming shows — shown only to the households you choose, measured like the rest of your marketing.",
+    }),
   component: HomePage,
 });
 

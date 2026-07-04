@@ -1,20 +1,54 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { IndustryPage } from "@/components/mojo/IndustryPage";
+import { pageHead, faqJsonLd, serviceJsonLd } from "@/lib/seo";
+
+const PATH = "/industries/auto-dealers";
+const TITLE = "Streaming TV Advertising for Auto Dealers | Mojo";
+const DESCRIPTION =
+  "Streaming TV advertising for Michigan auto dealers — same big-screen presence, zip-code precision, event tie-ins, and reporting that ties back to VDPs and traffic.";
+
+const faqs = [
+  {
+    q: "How much does streaming TV advertising cost for an auto dealer?",
+    a: "Single-rooftop dealers typically start between $8,000 and $25,000 a month in media. Groups start higher, with budget flexed by rooftop and event. That's enough to own a real share of voice in your market without competing head-to-head with broadcast spend. We'll size a plan on a book a call.",
+  },
+  {
+    q: "Can you run event campaigns — model-year closeouts, tent sales, tax season?",
+    a: "Yes. Event flighting is where streaming really shines — we can spin up creative, ramp spend into the event window, and pull back the second the sale is over. No renegotiating a broadcast contract to shift dates.",
+  },
+  {
+    q: "Is our OEM co-op eligible for streaming TV?",
+    a: "In most cases, yes. Every OEM handles co-op documentation a little differently, but streaming TV is now widely eligible. We prepare the pre-approval materials and post-air documentation your co-op team needs — send us your program and we'll tell you exactly what qualifies.",
+  },
+  {
+    q: "Can you target our actual market instead of a whole DMA?",
+    a: "Yes. Streaming targets down to the zip code, so your ad runs in the neighborhoods your customers actually come from — not the far side of a DMA where another dealer already owns the traffic.",
+  },
+  {
+    q: "We don't have a fresh commercial — is that a problem?",
+    a: "No. Creative is included. We shoot on your lot with your inventory and your people, and we can cut multiple versions from a single production day — one for brand, one for the current event, one for service.",
+  },
+  {
+    q: "What does the reporting actually look like?",
+    a: "A monthly report tied to what matters: VDP views, branded search lift, showroom and service-lane traffic, and cost per action against the flights that ran. Not a slide deck of impression counts. Book a call and we'll walk through a sample.",
+  },
+];
 
 export const Route = createFileRoute("/industries/auto-dealers")({
-  head: () => ({
-    meta: [
-      { title: "Streaming TV Advertising for Auto Dealers | Mojo" },
-      {
-        name: "description",
-        content:
-          "Streaming TV advertising for Michigan auto dealers — same big-screen presence, zip-code precision, event tie-ins, and reporting that ties back to VDPs and traffic.",
-      },
-      { property: "og:title", content: "Streaming TV Advertising for Auto Dealers | Mojo" },
-      { property: "og:url", content: "/industries/auto-dealers" },
-    ],
-    links: [{ rel: "canonical", href: "/industries/auto-dealers" }],
-  }),
+  head: () =>
+    pageHead({
+      path: PATH,
+      title: TITLE,
+      description: DESCRIPTION,
+      jsonLd: [
+        serviceJsonLd({
+          name: "Streaming TV advertising for auto dealers",
+          description: DESCRIPTION,
+          path: PATH,
+        }),
+        faqJsonLd(faqs),
+      ],
+    }),
   component: Page,
 });
 
@@ -59,32 +93,7 @@ function Page() {
       ]}
       metro="Michigan"
       geoPills={geo}
-      faqs={[
-        {
-          q: "How much does streaming TV advertising cost for an auto dealer?",
-          a: "Single-rooftop dealers typically start between $8,000 and $25,000 a month in media. Groups start higher, with budget flexed by rooftop and event. That's enough to own a real share of voice in your market without competing head-to-head with broadcast spend. We'll size a plan on a book a call.",
-        },
-        {
-          q: "Can you run event campaigns — model-year closeouts, tent sales, tax season?",
-          a: "Yes. Event flighting is where streaming really shines — we can spin up creative, ramp spend into the event window, and pull back the second the sale is over. No renegotiating a broadcast contract to shift dates.",
-        },
-        {
-          q: "Is our OEM co-op eligible for streaming TV?",
-          a: "In most cases, yes. Every OEM handles co-op documentation a little differently, but streaming TV is now widely eligible. We prepare the pre-approval materials and post-air documentation your co-op team needs — send us your program and we'll tell you exactly what qualifies.",
-        },
-        {
-          q: "Can you target our actual market instead of a whole DMA?",
-          a: "Yes. Streaming targets down to the zip code, so your ad runs in the neighborhoods your customers actually come from — not the far side of a DMA where another dealer already owns the traffic.",
-        },
-        {
-          q: "We don't have a fresh commercial — is that a problem?",
-          a: "No. Creative is included. We shoot on your lot with your inventory and your people, and we can cut multiple versions from a single production day — one for brand, one for the current event, one for service.",
-        },
-        {
-          q: "What does the reporting actually look like?",
-          a: "A monthly report tied to what matters: VDP views, branded search lift, showroom and service-lane traffic, and cost per action against the flights that ran. Not a slide deck of impression counts. Book a call and we'll walk through a sample.",
-        },
-      ]}
+      faqs={faqs}
     />
   );
 }

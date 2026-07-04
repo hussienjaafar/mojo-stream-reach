@@ -1,24 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/mojo/PageShell";
 import { CTABand } from "@/components/mojo/CTABand";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/results")({
-  head: () => ({
-    meta: [
-      { title: "Results — Mojo streaming TV advertising" },
-      {
-        name: "description",
-        content:
-          "A new name in commercial streaming TV with a national track record behind it. Capability stats, an anonymized advocacy case, and our founding-client program.",
-      },
-      { property: "og:title", content: "Results — Mojo" },
-      {
-        property: "og:description",
-        content:
-          "Proof over promises. Capability stats and named case studies as they publish.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      path: "/results",
+      title: "Results — Mojo streaming TV advertising",
+      description:
+        "A new name in commercial streaming TV with a national track record behind it. Capability stats, an anonymized advocacy case, and our founding-client program.",
+    }),
   component: ResultsPage,
 });
 

@@ -8,18 +8,16 @@ const searchSchema = z.object({
   source: z.enum(["audit", "partner", "contact"]).optional(),
 });
 
+import { pageHead } from "@/lib/seo";
+
 export const Route = createFileRoute("/thank-you")({
-  head: () => ({
-    meta: [
-      { title: "Got it — Mojo" },
-      {
-        name: "description",
-        content:
-          "Thanks for reaching out. You'll hear from us within one business day.",
-      },
-      { name: "robots", content: "noindex" },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      path: "/thank-you",
+      title: "Got it — Mojo",
+      description: "Thanks for reaching out. You'll hear from us within one business day.",
+      robots: "noindex",
+    }),
   validateSearch: (search) => searchSchema.parse(search),
   component: ThankYouPage,
 });

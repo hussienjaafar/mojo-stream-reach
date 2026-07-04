@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PartnersRouteImport } from './routes/partners'
@@ -20,6 +21,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as WhoWeServePoliticalAdvocacyRouteImport } from './routes/who-we-serve.political-advocacy'
 import { Route as IndustriesLegalRouteImport } from './routes/industries.legal'
 import { Route as IndustriesHomeServicesRouteImport } from './routes/industries.home-services'
@@ -35,6 +37,11 @@ const ThankYouRoute = ThankYouRouteImport.update({
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResultsRoute = ResultsRouteImport.update({
@@ -82,6 +89,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
 const WhoWeServePoliticalAdvocacyRoute =
   WhoWeServePoliticalAdvocacyRouteImport.update({
     id: '/who-we-serve/political-advocacy',
@@ -124,6 +136,7 @@ export interface FileRoutesByFullPath {
   '/partners': typeof PartnersRoute
   '/privacy': typeof PrivacyRoute
   '/results': typeof ResultsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/thank-you': typeof ThankYouRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -132,17 +145,18 @@ export interface FileRoutesByFullPath {
   '/industries/home-services': typeof IndustriesHomeServicesRoute
   '/industries/legal': typeof IndustriesLegalRoute
   '/who-we-serve/political-advocacy': typeof WhoWeServePoliticalAdvocacyRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/free-audit': typeof FreeAuditRoute
   '/how-it-works': typeof HowItWorksRoute
   '/partners': typeof PartnersRoute
   '/privacy': typeof PrivacyRoute
   '/results': typeof ResultsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/thank-you': typeof ThankYouRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -151,6 +165,7 @@ export interface FileRoutesByTo {
   '/industries/home-services': typeof IndustriesHomeServicesRoute
   '/industries/legal': typeof IndustriesLegalRoute
   '/who-we-serve/political-advocacy': typeof WhoWeServePoliticalAdvocacyRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -163,6 +178,7 @@ export interface FileRoutesById {
   '/partners': typeof PartnersRoute
   '/privacy': typeof PrivacyRoute
   '/results': typeof ResultsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/thank-you': typeof ThankYouRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -171,6 +187,7 @@ export interface FileRoutesById {
   '/industries/home-services': typeof IndustriesHomeServicesRoute
   '/industries/legal': typeof IndustriesLegalRoute
   '/who-we-serve/political-advocacy': typeof WhoWeServePoliticalAdvocacyRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -184,6 +201,7 @@ export interface FileRouteTypes {
     | '/partners'
     | '/privacy'
     | '/results'
+    | '/sitemap.xml'
     | '/terms'
     | '/thank-you'
     | '/blog/$slug'
@@ -192,17 +210,18 @@ export interface FileRouteTypes {
     | '/industries/home-services'
     | '/industries/legal'
     | '/who-we-serve/political-advocacy'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
-    | '/blog'
     | '/contact'
     | '/free-audit'
     | '/how-it-works'
     | '/partners'
     | '/privacy'
     | '/results'
+    | '/sitemap.xml'
     | '/terms'
     | '/thank-you'
     | '/blog/$slug'
@@ -211,6 +230,7 @@ export interface FileRouteTypes {
     | '/industries/home-services'
     | '/industries/legal'
     | '/who-we-serve/political-advocacy'
+    | '/blog'
   id:
     | '__root__'
     | '/'
@@ -222,6 +242,7 @@ export interface FileRouteTypes {
     | '/partners'
     | '/privacy'
     | '/results'
+    | '/sitemap.xml'
     | '/terms'
     | '/thank-you'
     | '/blog/$slug'
@@ -230,6 +251,7 @@ export interface FileRouteTypes {
     | '/industries/home-services'
     | '/industries/legal'
     | '/who-we-serve/political-advocacy'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -242,6 +264,7 @@ export interface RootRouteChildren {
   PartnersRoute: typeof PartnersRoute
   PrivacyRoute: typeof PrivacyRoute
   ResultsRoute: typeof ResultsRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   ThankYouRoute: typeof ThankYouRoute
   IndustriesAutoDealersRoute: typeof IndustriesAutoDealersRoute
@@ -265,6 +288,13 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/results': {
@@ -330,6 +360,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/who-we-serve/political-advocacy': {
       id: '/who-we-serve/political-advocacy'
       path: '/who-we-serve/political-advocacy'
@@ -377,10 +414,12 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
@@ -395,6 +434,7 @@ const rootRouteChildren: RootRouteChildren = {
   PartnersRoute: PartnersRoute,
   PrivacyRoute: PrivacyRoute,
   ResultsRoute: ResultsRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   ThankYouRoute: ThankYouRoute,
   IndustriesAutoDealersRoute: IndustriesAutoDealersRoute,

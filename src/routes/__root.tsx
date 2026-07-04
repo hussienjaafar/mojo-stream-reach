@@ -11,6 +11,11 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import {
+  ORGANIZATION_JSONLD,
+  LOCAL_BUSINESS_JSONLD,
+  OG_IMAGE,
+} from "../lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -79,23 +84,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Mojo puts your ad on live sports and the biggest streaming shows — only in the households you choose, measured like the rest of your marketing.",
+          "Your ad on live sports and premium streaming shows — shown only to the households you choose, measured like the rest of your marketing.",
       },
       { property: "og:title", content: "Mojo — Streaming TV advertising for mid-market businesses" },
       {
         property: "og:description",
         content:
-          "Your ad on live sports and premium streaming, shown only to the households you choose.",
+          "Your ad on live sports and premium streaming shows — shown only to the households you choose, measured like the rest of your marketing.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Mojo" },
+      { property: "og:image", content: OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Mojo — Streaming TV advertising for mid-market businesses" },
-      { name: "description", content: "Your ad on live sports and premium streaming shows — shown only to the households you choose, measured like the rest of your marketing." },
-      { property: "og:description", content: "Your ad on live sports and premium streaming shows — shown only to the households you choose, measured like the rest of your marketing." },
-      { name: "twitter:description", content: "Your ad on live sports and premium streaming shows — shown only to the households you choose, measured like the rest of your marketing." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/77857555-2f3c-4198-8f06-a4d166950a2e" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/77857555-2f3c-4198-8f06-a4d166950a2e" },
+      {
+        name: "twitter:description",
+        content:
+          "Your ad on live sports and premium streaming shows — shown only to the households you choose, measured like the rest of your marketing.",
+      },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -105,6 +112,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(ORGANIZATION_JSONLD),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(LOCAL_BUSINESS_JSONLD),
       },
     ],
   }),
@@ -119,6 +136,13 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        {/* Mark the doc as JS-enabled BEFORE first paint so entrance animations
+            only run post-hydration; SSR HTML stays fully visible. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
       </head>
       <body>
         {children}
