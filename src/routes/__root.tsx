@@ -20,21 +20,38 @@ import {
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-mojo-cream px-4">
-      <div className="max-w-md text-center">
-        <h1 className="font-display text-7xl text-mojo-ink">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-mojo-ink">Page not found</h2>
-        <p className="mt-2 text-sm text-mojo-mute">
-          That page has left the airwaves. Head back home.
+      <main id="main-content" className="max-w-lg text-center">
+        <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
+          404 — off the air
+        </div>
+        <h1 className="mt-5 font-display text-5xl md:text-6xl text-mojo-ink leading-[1.05]">
+          This channel doesn't exist.
+        </h1>
+        <p className="mt-5 text-mojo-mute leading-relaxed">
+          The page you were looking for isn't here — maybe it moved, maybe the
+          link had a typo, maybe it never aired. Try one of these instead.
         </p>
-        <div className="mt-6">
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-mojo-clay px-4 py-2 text-sm font-medium text-mojo-cream hover:bg-mojo-clay-deep transition-colors"
+            className="inline-flex items-center rounded-md bg-mojo-clay px-5 py-2.5 text-sm font-medium text-mojo-cream hover:bg-mojo-clay-deep transition-colors"
           >
             Go home
           </Link>
+          <Link
+            to="/how-it-works"
+            className="inline-flex items-center rounded-md border border-mojo-border bg-mojo-cream px-5 py-2.5 text-sm font-medium text-mojo-ink hover:bg-mojo-cream-2 transition-colors"
+          >
+            How it works
+          </Link>
+          <Link
+            to="/contact"
+            className="inline-flex items-center rounded-md border border-mojo-border bg-mojo-cream px-5 py-2.5 text-sm font-medium text-mojo-ink hover:bg-mojo-cream-2 transition-colors"
+          >
+            Contact
+          </Link>
         </div>
-      </div>
+      </main>
     </div>
   );
 }
