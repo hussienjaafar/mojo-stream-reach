@@ -7,28 +7,29 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { pageHead, faqJsonLd, serviceJsonLd } from "@/lib/seo";
+
+const PATH = "/who-we-serve/political-advocacy";
+const TITLE = "Political & Advocacy CTV Advertising | Mojo";
+const DESCRIPTION =
+  "Streaming TV advertising for political campaigns, PACs, and advocacy organizations. Voter-file matched CTV, rapid creative turnaround, and compliance-aware trafficking.";
 
 export const Route = createFileRoute("/who-we-serve/political-advocacy")({
-  head: () => ({
-    meta: [
-      { title: "Political & Advocacy CTV Advertising | Mojo" },
-      {
-        name: "description",
-        content:
-          "Streaming TV advertising for political campaigns, PACs, and advocacy organizations. Voter-file matched CTV, rapid creative turnaround, and compliance-aware trafficking.",
-      },
-      { property: "og:title", content: "Political & Advocacy CTV Advertising | Mojo" },
-      {
-        property: "og:description",
-        content:
-          "Voter-file matched streaming TV, rapid-turn creative, and buying discipline from a team that has delivered for congressional campaigns and national advocacy organizations.",
-      },
-      { property: "og:url", content: "https://mojo-stream-reach.lovable.app/who-we-serve/political-advocacy" },
-    ],
-    links: [
-      { rel: "canonical", href: "https://mojo-stream-reach.lovable.app/who-we-serve/political-advocacy" },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      path: PATH,
+      title: TITLE,
+      description: DESCRIPTION,
+      jsonLd: [
+        serviceJsonLd({
+          name: "Political & advocacy streaming TV advertising",
+          description: DESCRIPTION,
+          path: PATH,
+          serviceType: "Political and advocacy CTV advertising",
+        }),
+        faqJsonLd(faqs),
+      ],
+    }),
   component: PoliticalAdvocacyPage,
 });
 
