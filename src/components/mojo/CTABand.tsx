@@ -1,14 +1,22 @@
 import { Link } from "@tanstack/react-router";
 
-export function CTABand() {
+interface CTABandProps {
+  headline?: string;
+  subhead?: string;
+}
+
+export function CTABand({
+  headline = "Let's put you on TV.",
+  subhead = "A short call, a plain-English plan, and a spot on the biggest screens your customers watch.",
+}: CTABandProps) {
   return (
     <section className="bg-mojo-cream-2 border-t border-mojo-border">
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28 text-center">
         <h2 className="font-display text-4xl md:text-6xl text-mojo-ink">
-          Let's put you on TV.
+          {headline}
         </h2>
         <p className="mt-4 text-mojo-mute max-w-xl mx-auto">
-          A short call, a plain-English plan, and a spot on the biggest screens your customers watch.
+          {subhead}
         </p>
         <div className="mt-8">
           <Link
