@@ -115,7 +115,8 @@
    Only apply the invisible-then-fade sequence once the client script has
    marked <html> with .js. Reduced-motion users never see the animation. */
 @utility mojo-fade-up {
-  /* base: visible; keeps SSR HTML readable pre-hydration */
+  /* base: fully visible; html.js override below animates post-hydration */
+  opacity: 1;
 }
 
 @keyframes mojo-fade-up {
