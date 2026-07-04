@@ -1,13 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PlaceholderPage } from "@/components/mojo/PlaceholderPage";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/privacy")({
-  head: () => ({
-    meta: [
-      { title: "Privacy policy \u2014 Mojo" },
-      { name: "description", content: "Full privacy policy \u2014 coming soon." },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      path: "/privacy",
+      title: "Privacy policy — Mojo",
+      description: "How Mojo handles your data. Full privacy policy — coming soon.",
+    }),
   component: Page,
 });
 
