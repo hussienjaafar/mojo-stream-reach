@@ -12,26 +12,16 @@ import {
 } from "@/components/mojo/form-fields";
 import { useLeadForm } from "@/lib/use-lead-form";
 
+import { pageHead } from "@/lib/seo";
+
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Book a call — Mojo streaming TV" },
-      {
-        name: "description",
-        content:
-          "Tell us about your business and your market. We'll put together a plan and walk you through it — no obligation.",
-      },
-      { property: "og:title", content: "Book a call — Mojo" },
-      {
-        property: "og:description",
-        content:
-          "Grab a time or send a note. We reply within one business day.",
-      },
-    ],
-    links: [
-      { rel: "canonical", href: "https://mojo-stream-reach.lovable.app/contact" },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      path: "/contact",
+      title: "Book a call — Mojo streaming TV",
+      description:
+        "Tell us about your business and your market. We'll put together a plan and walk you through it — no obligation.",
+    }),
   component: ContactPage,
 });
 
