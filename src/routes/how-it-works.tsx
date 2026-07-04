@@ -7,24 +7,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { pageHead, faqJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/how-it-works")({
-  head: () => ({
-    meta: [
-      { title: "How it works — Mojo streaming TV advertising" },
-      {
-        name: "description",
-        content:
-          "Five steps from first call to on-screen: strategy, in-house production, transparent buy, launch within 30 days, and monthly reporting that respects you.",
-      },
-      { property: "og:title", content: "How it works — Mojo" },
-      {
-        property: "og:description",
-        content:
-          "TV advertising, minus the mystery. See how a Mojo campaign gets made, aired, and measured.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      path: "/how-it-works",
+      title: "How it works — Mojo streaming TV advertising",
+      description:
+        "Five steps from first call to on-screen: strategy, in-house production, transparent buy, launch within 30 days, and monthly reporting that respects you.",
+      jsonLd: [faqJsonLd(faqs)],
+    }),
   component: HowItWorksPage,
 });
 
