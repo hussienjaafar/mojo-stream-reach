@@ -21,6 +21,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as WhoWeServePoliticalAdvocacyRouteImport } from './routes/who-we-serve.political-advocacy'
 import { Route as IndustriesLegalRouteImport } from './routes/industries.legal'
 import { Route as IndustriesHomeServicesRouteImport } from './routes/industries.home-services'
@@ -88,6 +89,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
 const WhoWeServePoliticalAdvocacyRoute =
   WhoWeServePoliticalAdvocacyRouteImport.update({
     id: '/who-we-serve/political-advocacy',
@@ -139,11 +145,11 @@ export interface FileRoutesByFullPath {
   '/industries/home-services': typeof IndustriesHomeServicesRoute
   '/industries/legal': typeof IndustriesLegalRoute
   '/who-we-serve/political-advocacy': typeof WhoWeServePoliticalAdvocacyRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/free-audit': typeof FreeAuditRoute
   '/how-it-works': typeof HowItWorksRoute
@@ -159,6 +165,7 @@ export interface FileRoutesByTo {
   '/industries/home-services': typeof IndustriesHomeServicesRoute
   '/industries/legal': typeof IndustriesLegalRoute
   '/who-we-serve/political-advocacy': typeof WhoWeServePoliticalAdvocacyRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -180,6 +187,7 @@ export interface FileRoutesById {
   '/industries/home-services': typeof IndustriesHomeServicesRoute
   '/industries/legal': typeof IndustriesLegalRoute
   '/who-we-serve/political-advocacy': typeof WhoWeServePoliticalAdvocacyRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -202,11 +210,11 @@ export interface FileRouteTypes {
     | '/industries/home-services'
     | '/industries/legal'
     | '/who-we-serve/political-advocacy'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
-    | '/blog'
     | '/contact'
     | '/free-audit'
     | '/how-it-works'
@@ -222,6 +230,7 @@ export interface FileRouteTypes {
     | '/industries/home-services'
     | '/industries/legal'
     | '/who-we-serve/political-advocacy'
+    | '/blog'
   id:
     | '__root__'
     | '/'
@@ -242,6 +251,7 @@ export interface FileRouteTypes {
     | '/industries/home-services'
     | '/industries/legal'
     | '/who-we-serve/political-advocacy'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -350,6 +360,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/who-we-serve/political-advocacy': {
       id: '/who-we-serve/political-advocacy'
       path: '/who-we-serve/political-advocacy'
@@ -397,10 +414,12 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
@@ -427,3 +446,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
