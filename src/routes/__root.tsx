@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Mojo puts your ad on live sports and the biggest streaming shows — only in the households you choose, measured like the rest of your marketing.",
       },
-      { property: "og:title", content: "Mojo — Streaming TV advertising" },
+      { property: "og:title", content: "Mojo — Streaming TV advertising for mid-market businesses" },
       {
         property: "og:description",
         content:
@@ -90,6 +90,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Mojo" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Mojo — Streaming TV advertising for mid-market businesses" },
+      { name: "description", content: "Your ad on live sports and premium streaming shows — shown only to the households you choose, measured like the rest of your marketing." },
+      { property: "og:description", content: "Your ad on live sports and premium streaming shows — shown only to the households you choose, measured like the rest of your marketing." },
+      { name: "twitter:description", content: "Your ad on live sports and premium streaming shows — shown only to the households you choose, measured like the rest of your marketing." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/77857555-2f3c-4198-8f06-a4d166950a2e" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/77857555-2f3c-4198-8f06-a4d166950a2e" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
