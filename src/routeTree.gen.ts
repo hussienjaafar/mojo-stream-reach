@@ -25,6 +25,7 @@ import { Route as IndustriesLegalRouteImport } from './routes/industries.legal'
 import { Route as IndustriesHomeServicesRouteImport } from './routes/industries.home-services'
 import { Route as IndustriesHealthcareRouteImport } from './routes/industries.healthcare'
 import { Route as IndustriesAutoDealersRouteImport } from './routes/industries.auto-dealers'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const ThankYouRoute = ThankYouRouteImport.update({
   id: '/thank-you',
@@ -107,11 +108,16 @@ const IndustriesAutoDealersRoute = IndustriesAutoDealersRouteImport.update({
   path: '/industries/auto-dealers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/free-audit': typeof FreeAuditRoute
   '/how-it-works': typeof HowItWorksRoute
@@ -120,6 +126,7 @@ export interface FileRoutesByFullPath {
   '/results': typeof ResultsRoute
   '/terms': typeof TermsRoute
   '/thank-you': typeof ThankYouRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/industries/auto-dealers': typeof IndustriesAutoDealersRoute
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/home-services': typeof IndustriesHomeServicesRoute
@@ -129,7 +136,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/free-audit': typeof FreeAuditRoute
   '/how-it-works': typeof HowItWorksRoute
@@ -138,6 +145,7 @@ export interface FileRoutesByTo {
   '/results': typeof ResultsRoute
   '/terms': typeof TermsRoute
   '/thank-you': typeof ThankYouRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/industries/auto-dealers': typeof IndustriesAutoDealersRoute
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/home-services': typeof IndustriesHomeServicesRoute
@@ -148,7 +156,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/free-audit': typeof FreeAuditRoute
   '/how-it-works': typeof HowItWorksRoute
@@ -157,6 +165,7 @@ export interface FileRoutesById {
   '/results': typeof ResultsRoute
   '/terms': typeof TermsRoute
   '/thank-you': typeof ThankYouRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/industries/auto-dealers': typeof IndustriesAutoDealersRoute
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/home-services': typeof IndustriesHomeServicesRoute
@@ -177,6 +186,7 @@ export interface FileRouteTypes {
     | '/results'
     | '/terms'
     | '/thank-you'
+    | '/blog/$slug'
     | '/industries/auto-dealers'
     | '/industries/healthcare'
     | '/industries/home-services'
@@ -195,6 +205,7 @@ export interface FileRouteTypes {
     | '/results'
     | '/terms'
     | '/thank-you'
+    | '/blog/$slug'
     | '/industries/auto-dealers'
     | '/industries/healthcare'
     | '/industries/home-services'
@@ -213,6 +224,7 @@ export interface FileRouteTypes {
     | '/results'
     | '/terms'
     | '/thank-you'
+    | '/blog/$slug'
     | '/industries/auto-dealers'
     | '/industries/healthcare'
     | '/industries/home-services'
@@ -223,7 +235,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   FreeAuditRoute: typeof FreeAuditRoute
   HowItWorksRoute: typeof HowItWorksRoute
@@ -353,13 +365,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesAutoDealersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   FreeAuditRoute: FreeAuditRoute,
   HowItWorksRoute: HowItWorksRoute,
