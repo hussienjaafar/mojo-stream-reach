@@ -1,20 +1,54 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { IndustryPage } from "@/components/mojo/IndustryPage";
+import { pageHead, faqJsonLd, serviceJsonLd } from "@/lib/seo";
+
+const PATH = "/industries/healthcare";
+const TITLE = "Streaming TV Advertising for Healthcare Practices | Mojo";
+const DESCRIPTION =
+  "Streaming TV advertising for Michigan healthcare practices and groups — premium environments, household targeting near your locations, compliant creative.";
+
+const faqs = [
+  {
+    q: "How much does streaming TV advertising cost for a healthcare practice?",
+    a: "Practices and groups typically start between $5,000 and $20,000 a month in media, depending on service line and geography. That's enough to hold a real share of voice in the neighborhoods around your locations. We'll size the right plan on a book a call.",
+  },
+  {
+    q: "Can you keep our targeting and creative compliant with healthcare rules?",
+    a: "Yes. We keep targeting compliant for healthcare advertisers — no sensitive-condition targeting, no health-status inference. Creative is reviewed with your compliance point-person before anything airs, and we're familiar with the guardrails around patient testimonials and outcome claims.",
+  },
+  {
+    q: "Can you target households near our specific locations?",
+    a: "Yes. Streaming lets us target down to the zip code, so your ad runs only in a realistic drive-time radius around each location — not across an entire broadcast market.",
+  },
+  {
+    q: "We don't have a commercial — is that a problem?",
+    a: "Not at all. Creative is included. We write the spot with your clinical team, shoot on-site or at a nearby location, and deliver the final cuts. Most practices shoot in a single day.",
+  },
+  {
+    q: "How do we measure this without patients clicking a TV ad?",
+    a: "We track new-patient inquiries, branded search lift, appointment-request forms, and — where possible — household-level visit attribution. You'll see the numbers move in the systems your practice already uses.",
+  },
+  {
+    q: "How fast can we launch?",
+    a: "From signed agreement to on-air is typically three to four weeks, most of it in production and compliance review. If you already have usable creative, we can move faster. Book a call and we'll walk through your timeline.",
+  },
+];
 
 export const Route = createFileRoute("/industries/healthcare")({
-  head: () => ({
-    meta: [
-      { title: "Streaming TV Advertising for Healthcare Practices | Mojo" },
-      {
-        name: "description",
-        content:
-          "Streaming TV advertising for Michigan healthcare practices and groups — premium environments, household targeting near your locations, compliant creative.",
-      },
-      { property: "og:title", content: "Streaming TV Advertising for Healthcare Practices | Mojo" },
-      { property: "og:url", content: "/industries/healthcare" },
-    ],
-    links: [{ rel: "canonical", href: "/industries/healthcare" }],
-  }),
+  head: () =>
+    pageHead({
+      path: PATH,
+      title: TITLE,
+      description: DESCRIPTION,
+      jsonLd: [
+        serviceJsonLd({
+          name: "Streaming TV advertising for healthcare practices",
+          description: DESCRIPTION,
+          path: PATH,
+        }),
+        faqJsonLd(faqs),
+      ],
+    }),
   component: Page,
 });
 
@@ -59,32 +93,7 @@ function Page() {
       ]}
       metro="Michigan"
       geoPills={geo}
-      faqs={[
-        {
-          q: "How much does streaming TV advertising cost for a healthcare practice?",
-          a: "Practices and groups typically start between $5,000 and $20,000 a month in media, depending on service line and geography. That's enough to hold a real share of voice in the neighborhoods around your locations. We'll size the right plan on a book a call.",
-        },
-        {
-          q: "Can you keep our targeting and creative compliant with healthcare rules?",
-          a: "Yes. We keep targeting compliant for healthcare advertisers — no sensitive-condition targeting, no health-status inference. Creative is reviewed with your compliance point-person before anything airs, and we're familiar with the guardrails around patient testimonials and outcome claims.",
-        },
-        {
-          q: "Can you target households near our specific locations?",
-          a: "Yes. Streaming lets us target down to the zip code, so your ad runs only in a realistic drive-time radius around each location — not across an entire broadcast market.",
-        },
-        {
-          q: "We don't have a commercial — is that a problem?",
-          a: "Not at all. Creative is included. We write the spot with your clinical team, shoot on-site or at a nearby location, and deliver the final cuts. Most practices shoot in a single day.",
-        },
-        {
-          q: "How do we measure this without patients clicking a TV ad?",
-          a: "We track new-patient inquiries, branded search lift, appointment-request forms, and — where possible — household-level visit attribution. You'll see the numbers move in the systems your practice already uses.",
-        },
-        {
-          q: "How fast can we launch?",
-          a: "From signed agreement to on-air is typically three to four weeks, most of it in production and compliance review. If you already have usable creative, we can move faster. Book a call and we'll walk through your timeline.",
-        },
-      ]}
+      faqs={faqs}
     />
   );
 }
