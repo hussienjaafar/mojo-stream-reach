@@ -68,7 +68,7 @@ function ContactPage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-14 md:pt-28 md:pb-16">
           <div className="max-w-3xl mojo-fade-up">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Contact
             </div>
             <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] text-mojo-ink">
@@ -86,7 +86,7 @@ function ContactPage() {
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-20 grid gap-12 lg:grid-cols-2 lg:items-start">
           {/* LEFT: scheduler embed placeholder */}
           <div>
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Pick a time
             </div>
             <h2 className="mt-4 font-display text-2xl md:text-3xl text-mojo-ink leading-tight">
@@ -105,7 +105,7 @@ function ContactPage() {
                   className="aspect-[4/3] w-full flex items-center justify-center p-8 text-center"
                 >
                   <div>
-                    <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+                    <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
                       Scheduler embed
                     </div>
                     <p className="mt-3 font-display text-2xl text-mojo-ink leading-tight max-w-sm">
@@ -123,7 +123,7 @@ function ContactPage() {
 
           {/* RIGHT: short contact form */}
           <div>
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Or send a note
             </div>
             <h2 className="mt-4 font-display text-2xl md:text-3xl text-mojo-ink leading-tight">

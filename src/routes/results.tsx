@@ -29,7 +29,7 @@ function ResultsPage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-24">
           <div className="max-w-3xl mojo-fade-up">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Results
             </div>
             <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-mojo-ink">
@@ -45,7 +45,7 @@ function ResultsPage() {
       {/* CAPABILITY STAT GRID */}
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
             Capability
           </div>
           <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1] max-w-3xl">
@@ -69,7 +69,7 @@ function ResultsPage() {
       {/* ANONYMIZED CAPABILITY BLOCK */}
       <section className="bg-mojo-cream-2 border-b border-mojo-border">
         <div className="mx-auto max-w-4xl px-6 py-24">
-          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+          <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
             Case study — anonymized
           </div>
           <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">
@@ -96,7 +96,7 @@ function ResultsPage() {
             className="rounded-2xl bg-mojo-cream p-8 md:p-12"
             style={{ border: "1.5px solid var(--mojo-clay)" }}
           >
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               First 10 clients
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">

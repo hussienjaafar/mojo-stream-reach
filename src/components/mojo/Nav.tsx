@@ -42,8 +42,10 @@ export function Nav() {
         </div>
 
         <button
-          aria-label="Toggle menu"
-          className="md:hidden p-2 -mr-2 text-mojo-ink"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          className="md:hidden p-2 -mr-2 text-mojo-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-mojo-clay rounded-md"
           onClick={() => setOpen((v) => !v)}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
@@ -61,7 +63,7 @@ export function Nav() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-mojo-border bg-mojo-cream">
+        <div id="mobile-menu" className="md:hidden border-t border-mojo-border bg-mojo-cream">
           <div className="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-4">
             {navLinks.map((l) => (
               <Link

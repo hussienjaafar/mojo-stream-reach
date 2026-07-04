@@ -88,7 +88,7 @@ function HomePage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-24">
           <div className="max-w-3xl mojo-fade-up">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Streaming TV advertising
             </div>
             <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-mojo-ink">
@@ -151,7 +151,7 @@ function HomePage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 py-24 grid gap-12 md:grid-cols-2 md:gap-20">
           <div>
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               The shift
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">
@@ -173,7 +173,7 @@ function HomePage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               How it works
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">
@@ -209,7 +209,7 @@ function HomePage() {
       <section className="bg-mojo-cream-2 border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 py-24 grid gap-12 md:grid-cols-2 items-center">
           <div>
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Live sports
             </div>
             <h2 className="mt-4 font-display text-4xl md:text-6xl text-mojo-ink leading-[1.05]">
@@ -260,7 +260,7 @@ function HomePage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-3xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Independent
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">
@@ -290,7 +290,7 @@ function HomePage() {
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay font-medium">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Who we serve
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">
