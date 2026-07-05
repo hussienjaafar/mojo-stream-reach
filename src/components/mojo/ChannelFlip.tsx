@@ -109,7 +109,9 @@ export function ChannelFlip() {
         {CHANNELS.map((ch, i) => (
           <div
             key={ch.code}
-            ref={(el) => (blockRefs.current[i] = el)}
+            ref={(el) => {
+              blockRefs.current[i] = el;
+            }}
             data-channel-idx={i}
           >
             <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
