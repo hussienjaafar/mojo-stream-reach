@@ -214,6 +214,19 @@ const posts: Record<string, PostContent> = {
           Hold off when streaming is going to be the majority of your intended TV budget. Hold off when you want tight zip-code targeting across multiple premium apps. Hold off when you need live-sports inventory beyond what the station itself carries. Hold off when you can't get a fee-transparent breakdown of the CPM for the streaming portion, separated from anything linear. Any one of those alone means the station package is probably not the right home for that dollar.
         </P>
 
+        <H2>Questions to ask the station rep before signing</H2>
+        <P>
+          Push on the specifics before the ink dries. Which exact apps and content publishers is my spot going to run on, itemized, not "our premium OTT bundle"? What is the working CPM for the streaming portion alone, after your margin and any resold-platform fees are pulled out? Can I get zip-code-level targeting inside the station's OTT app, or only DMA-level? What does the report look like at month three, and does it separate the streaming impressions from the linear ones?
+        </P>
+        <P>
+          If any of those answers arrive as "we'll have to check" or "it's included in the package," treat it as data. It usually means the streaming layer was assembled by a partner the station itself doesn't fully control. That's fine as a product, but you should know it's what you're buying — and price the trade-off accordingly.
+        </P>
+
+        <H2>Where independent buyers actually add value</H2>
+        <P>
+          An independent buyer isn't automatically the right answer either. What we add is the ability to move budget across publishers without losing anything on our own side, and the discipline to walk away from a plan that doesn't fit. If the right buy for your market this quarter is 70% station streaming and 30% dedicated CTV, that's what we'll build. If it's the opposite, we'll build that instead. The buy follows your customer, and nothing on our shelf needs to move for us to eat.
+        </P>
+
         <H2>How to compare the two proposals fairly</H2>
         <P>
           Ask both the station and an independent buyer for the same four things: the list of apps and inventory your buy will actually run on, the zip codes and audience it will reach, the working CPM after every fee is exposed, and how they will measure conversions instead of impressions. Put the two proposals side by side on your desk. The right answer usually becomes obvious inside ten minutes.
