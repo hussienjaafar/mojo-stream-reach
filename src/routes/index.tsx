@@ -95,8 +95,9 @@ function HomePage() {
               Remember when TV advertising meant a $50,000 handshake?
             </h1>
             <p className="mt-6 text-lg text-mojo-mute max-w-2xl leading-relaxed">
-              It doesn't anymore. Your ad — during live sports and the biggest streaming shows — shown only to the households you choose. Measured like the rest of your marketing.
+              It doesn't anymore. Your commercial runs during the football game your neighbor is watching after dinner, shown only in the zip codes you draw customers from, and tied back to the phone that rings on Monday morning. That's the whole pitch.
             </p>
+            {/* TODO-WARSTORY: a real one-sentence example the founder can stand behind — e.g., a specific Michigan zip cluster where a home-services client saw first-call volume move inside 60 days. */}
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/contact"
