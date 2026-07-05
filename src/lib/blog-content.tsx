@@ -156,7 +156,7 @@ const posts: Record<string, PostContent> = {
           Whether you go self-serve or hire a buyer, ask the same short list up front. What is my actual working CPM after the platform's margin? Which specific apps and content categories will my spot run against? How do I exclude the ones I don't want, and how quickly can I make that change? What baseline period do you recommend before launch, and what conversion signal are we using to measure lift? If the answers are vague, the reporting will be vague too, and that vagueness will cost you real money on the back end.
 </P>
 
-
+        <H2>When self-serve is fine, and when it isn't</H2>
         <P>
           If you have a strong in-house creative team, a media analyst who lives in dashboards all day, and a budget you're comfortable spending as tuition, self-serve platforms are a reasonable place to learn. If you're a mid-market operator whose day is already spent running a company, self-serve is a slow way to spend real money on the wrong impressions.
         </P>
