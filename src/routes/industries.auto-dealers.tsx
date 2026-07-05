@@ -10,27 +10,27 @@ const DESCRIPTION =
 const faqs = [
   {
     q: "How much does streaming TV advertising cost for an auto dealer?",
-    a: "Single-rooftop dealers typically start between $8,000 and $25,000 a month in media. Groups start higher, with budget flexed by rooftop and event. That's enough to own a real share of voice in your market without competing head-to-head with broadcast spend. We'll size a plan on a book a call.",
+    a: "Single-rooftop dealers typically start between $8,000 and $25,000 a month in working media. Groups start higher, with budget flexed by rooftop and by event. At that level you can own a real share of voice in your market without trying to trade broadcast checks with the dealer down the road. We'll size a plan on a book a call.",
   },
   {
     q: "Can you run event campaigns — model-year closeouts, tent sales, tax season?",
-    a: "Yes. Event flighting is where streaming really shines — we can spin up creative, ramp spend into the event window, and pull back the second the sale is over. No renegotiating a broadcast contract to shift dates.",
+    a: "Yes. Event flighting is where streaming really shines. We spin up fresh creative, ramp spend into the event window, then pull spend back the second the sale is over. No renegotiating a broadcast contract to shift dates.",
   },
   {
     q: "Is our OEM co-op eligible for streaming TV?",
-    a: "In most cases, yes. Every OEM handles co-op documentation a little differently, but streaming TV is now widely eligible. We prepare the pre-approval materials and post-air documentation your co-op team needs — send us your program and we'll tell you exactly what qualifies.",
+    a: "In most cases, yes. Every OEM handles co-op documentation a little differently, but streaming TV is now widely eligible under current programs. We prepare the pre-approval materials and the post-air documentation your co-op team needs. Send us your program and we'll tell you exactly what qualifies.",
   },
   {
     q: "Can you target our actual market instead of a whole DMA?",
-    a: "Yes. Streaming targets down to the zip code, so your ad runs in the neighborhoods your customers actually come from — not the far side of a DMA where another dealer already owns the traffic.",
+    a: "Yes. Streaming targets down to the zip code, so your commercial runs inside the neighborhoods your customers actually drive in from. You aren't buying the far edge of a DMA where another dealer already owns the traffic.",
   },
   {
     q: "We don't have a fresh commercial — is that a problem?",
-    a: "No. Creative is included. We shoot on your lot with your inventory and your people, and we can cut multiple versions from a single production day — one for brand, one for the current event, one for service.",
+    a: "No. Creative is part of the program. We shoot on your lot, with your inventory and your people, and cut multiple versions from a single production day — one for brand, one for the current event, one for service.",
   },
   {
     q: "What does the reporting actually look like?",
-    a: "A monthly report tied to what matters: VDP views, branded search lift, showroom and service-lane traffic, and cost per action against the flights that ran. Not a slide deck of impression counts. Book a call and we'll walk through a sample.",
+    a: "A monthly report tied to what actually matters: VDP views, branded search lift, showroom and service-lane traffic, and cost per action against the flights that ran. It's a working document, not a slide deck of impression counts. Book a call and we'll walk through a sample.",
   },
 ];
 
