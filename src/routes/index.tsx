@@ -217,7 +217,7 @@ function HomePage() {
               Yes — during the game.
             </h2>
             <p className="mt-6 text-lg text-mojo-ink/85 leading-relaxed max-w-xl">
-              Live sports on streaming TV used to be untouchable for local budgets. Now your ad can run during the games your customers watch, in your market, at a fraction of old broadcast costs.
+              Live sports on streaming used to be untouchable for a local budget. It isn't anymore. Your commercial can run during the same weekend game your customers are already gathered around, in your market, at a fraction of what broadcast used to cost — and the household that saw it can be counted the next day.
             </p>
             <p className="mt-4 text-xs text-mojo-mute">
               Availability varies by season and platform.
