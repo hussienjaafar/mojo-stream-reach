@@ -143,7 +143,20 @@ const posts: Record<string, PostContent> = {
           When someone tells you their platform "proves ROAS," ask exactly how the incrementality was measured. If the answer is "our attribution model," you have a modelled number rather than a measured one. Both have a place, but they are very different things. Confuse them and you'll spend real money on a report that only ever tells you what you already believed.
         </P>
 
-        <H2>When self-serve is fine, and when it isn't</H2>
+        <H2>Who self-serve actually is right for</H2>
+<P>
+          There's a real profile of buyer who should ignore everything above and go straight to a self-serve platform. The performance marketer at a direct-to-consumer brand with a mature creative library, a data team, and a mandate to test TV as a channel — that person will get more out of a self-serve buy than an agency retainer. The tooling was built for them. They already have the incrementality methodology, the pixel infrastructure, and the internal appetite to fail publicly for two quarters before something works.
+</P>
+<P>
+          The mismatch happens when a mid-market operator — the plumbing group owner, the managing partner, the dealer principal — reads the same landing page and assumes it was written for them. It wasn't. What looks like simplicity is really a set of skilled decisions the platform expects you to make on your own. When those decisions land on somebody whose job is running a business rather than optimizing a media stack, the outcomes usually reflect it.
+</P>
+
+<H2>Questions to ask before you sign up for one</H2>
+<P>
+          Whether you go self-serve or hire a buyer, ask the same short list up front. What is my actual working CPM after the platform's margin? Which specific apps and content categories will my spot run against? How do I exclude the ones I don't want, and how quickly can I make that change? What baseline period do you recommend before launch, and what conversion signal are we using to measure lift? If the answers are vague, the reporting will be vague too, and that vagueness will cost you real money on the back end.
+</P>
+
+
         <P>
           If you have a strong in-house creative team, a media analyst who lives in dashboards all day, and a budget you're comfortable spending as tuition, self-serve platforms are a reasonable place to learn. If you're a mid-market operator whose day is already spent running a company, self-serve is a slow way to spend real money on the wrong impressions.
         </P>
