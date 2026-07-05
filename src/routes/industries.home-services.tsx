@@ -63,33 +63,34 @@ function Page() {
     <IndustryPage
       eyebrow="Home services advertising"
       h1="TV advertising for home services companies."
-      subhead="Be the name they already know when the furnace dies, the pipe bursts, or the roof gives up."
+      subhead="Be the name they already know when the furnace dies at 6 a.m."
+      /* TODO-WARSTORY: a real one-day shoot anecdote from a Michigan plumber, roofer, or HVAC client — e.g., a specific yard, a specific truck, and what the spot cost to make. */
       pain={[
-        "Lead costs on search keep climbing. Every plumber, roofer, and HVAC company in your market is bidding on the same handful of emergency keywords, and the platforms are more than happy to let the price go up.",
-        "The problem isn't demand. It's that nobody remembers your company name until something breaks — and by then, they're typing a generic search and clicking whoever paid the most that minute.",
-        "Streaming TV builds the brand recall that makes homeowners call you first, before they ever open a search bar. And when they do search, your cost per lead drops everywhere else too.",
+        "Search leads keep getting more expensive. Every plumber, roofer, and HVAC company in your market is bidding on the same handful of emergency keywords, and the platforms are more than happy to let that price drift up quarter after quarter.",
+        "The problem isn't demand. It's memory. Nobody remembers your company name until the water heater floods the basement, and by then they're typing a generic search and calling whoever paid the most that minute.",
+        "TV rebuilds that memory. A homeowner who has seen your truck on their screen a few Sunday afternoons doesn't open a search bar first. They pick up the phone. And when they do open one, your cost per lead drops everywhere else too.",
       ]}
       steps={[
         {
           n: "01",
           title: "We make your spot",
-          body: "A broadcast-quality ad about your company, your trucks, your team. Written, shot, and edited in-house. Included.",
+          body: "A broadcast-quality commercial featuring your trucks and your crew, written and shot by our in-house team. The production cost is baked into the program.",
         },
         {
           n: "02",
           title: "We put it on TV",
-          body: "Live sports and premium streaming apps — running only in the zip codes you actually roll a truck to.",
+          body: "Live weekend games and the streaming apps homeowners actually pay for — running only in the zip codes you'll roll a truck to.",
         },
         {
           n: "03",
           title: "We show you what happened",
-          body: "Branded search lift, call volume, and booked jobs tied back to the campaign. Not vanity impressions.",
+          body: "Branded search lift, call volume, and booked jobs tied back to the flights that ran. You'll see the movement inside your own CRM.",
         },
       ]}
       runsOn={[
-        "Live sports on streaming — weekends, weeknights, big games",
-        "Premium streaming apps your customers actually pay for",
-        "News and lifestyle channels that run in the background all day",
+        "Live weekend games — the appointment TV your customers still watch as it happens",
+        "The streaming apps households pay a monthly bill for",
+        "News and lifestyle channels that run in the background from breakfast to dinner",
       ]}
       metro="metro Detroit"
       geoPills={geo}
