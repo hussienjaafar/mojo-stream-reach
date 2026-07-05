@@ -63,22 +63,23 @@ function Page() {
     <IndustryPage
       eyebrow="Auto dealer advertising"
       h1="TV advertising for auto dealers."
-      subhead="Same big-screen presence you grew up on. New precision. Real reporting."
+      subhead="The same big-screen presence you grew up on. With new precision and real reporting."
+      /* TODO-WARSTORY: a real event-flight example from a rooftop or group — the specific sale window, the creative rotation, and what showed up in VDP and showroom traffic. */
       pain={[
-        "Dealers grew up on TV. It built the brand, it moved the metal, and it turned a name on a rooftop sign into the dealership everyone in the market knew.",
-        "Then the co-op grid got complicated, broadcast rates ran up, and half the buy became unmeasurable. Every month you're spending real money and hoping the report from the rep tells the whole story.",
-        "Streaming keeps the presence and adds the precision. Same big screen during the same games and shows — targeted to the zip codes you draw from, tied to sales events, and reported against VDPs and traffic instead of guesses.",
+        "Dealers grew up on TV. It built the brand, it moved the metal, and it turned a name on a rooftop sign into the dealership everyone in the market already knew before they ever pulled onto the lot.",
+        "Then the co-op grid got complicated. Broadcast rates ran up. Half the buy became unmeasurable. Every month you're writing a real check and hoping the report from your rep tells the whole story.",
+        "Streaming keeps the presence and adds the precision. Same big screen during the same games your customers watch, targeted to the zip codes you actually draw from, tied to your sales calendar, and reported against VDPs and traffic.",
       ]}
       steps={[
         {
           n: "01",
           title: "We make your spot",
-          body: "Event, model-year, service-lane, or brand. Shot on your lot with your inventory, cut for streaming — not a dubbed-over factory template.",
+          body: "Event, model-year, service-lane, or brand — shot on your lot with your inventory, cut for streaming, never a dubbed-over factory template.",
         },
         {
           n: "02",
           title: "We put it on TV",
-          body: "Live sports adjacency, premium streaming inventory, and event flighting timed to your sales calendar.",
+          body: "Live-sports adjacency, the streaming apps customers pay for, and event flighting timed to your sales calendar.",
         },
         {
           n: "03",
@@ -87,8 +88,8 @@ function Page() {
         },
       ]}
       runsOn={[
-        "Live sports on streaming — the tentpole games that used to require a broadcast buy",
-        "Premium streaming apps that carry appointment TV and prestige series",
+        "Live weekend games — the tentpole matchups that used to require a broadcast buy",
+        "The streaming apps that carry appointment TV and prestige series",
         "News and lifestyle channels that run through the morning and evening drive",
       ]}
       metro="Michigan"
