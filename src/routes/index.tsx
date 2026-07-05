@@ -27,19 +27,19 @@ const steps = [
     n: "01",
     title: "We make your spot",
     body:
-      "Scripted, shot, and edited in-house. Broadcast quality. Included — not a line item.",
+      "Our crew writes the script, shoots on your site, and cuts the final at broadcast quality. Production is baked into the program, so there's no separate invoice waiting after launch.",
   },
   {
     n: "02",
     title: "We put it on TV",
     body:
-      "Live sports and premium streaming apps, in the zip codes you choose. No wasted impressions three states over.",
+      "The buy runs during live sports and the streaming apps people already pay for — targeted down to the zip codes you actually cover. Households outside your service map never see it.",
   },
   {
     n: "03",
     title: "We show you what happened",
     body:
-      "Calls, visits, and search lift you can tie back to the campaign. Not vanity impressions.",
+      "The phone ringing. Walk-ins on Saturday. Branded search climbing week over week — all of it tied back to the flights that ran. Not vanity impressions.",
   },
 ];
 
