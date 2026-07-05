@@ -56,37 +56,37 @@ const timeline = [
 
 const monthOne = [
   "Kickoff call and creative brief signed",
-  "Script drafted, revised, and approved",
+  "Script drafted, revised, approved",
   "Production day scheduled (usually week two)",
-  "Media plan built with zip-code map and fee breakdown",
-  "Creative delivered for final sign-off",
-  "Campaign live on streaming, first pacing report inside 10 days",
+  "Media plan built with your zip-code map and every fee itemized",
+  "Final creative delivered for sign-off",
+  "Campaign live on streaming, first pacing report inside ten days",
 ];
 
 const faqs = [
   {
     q: "How long is a Mojo program?",
-    a: "Six months. That's not a sales tactic — streaming TV needs time for frequency to build and for brand-search lift to show up in the data. Under six months we can't honestly promise you a clean read on what worked. Book a call if you want to talk through the timing.",
+    a: "Six months. That's not a sales tactic — streaming TV needs time for frequency to build and for brand-search lift to actually show up in the data. Under six months we can't honestly promise you a clean read on what worked. Book a call if you want to talk through the timing before you commit.",
   },
   {
     q: "Do I have to bring my own creative?",
-    a: "No. Production is included. We script, shoot, and edit your spot in-house at broadcast quality. If you already have creative you love, we'll use it.",
+    a: "No. Production is part of the program. Our team scripts, shoots, and edits your commercial in-house at broadcast quality. If you already have a spot you love, we'll happily use it.",
   },
   {
     q: "What does a program cost?",
-    a: "Programs are built around your market and goals, not a rate card. On the call we'll tell you the honest floor for your zip codes and vertical, and what we'd actually recommend spending. If TV isn't the right lever for your budget, we'll say so.",
+    a: "Programs are built around your market and goals, so there's no rate card to point at. On the call we'll tell you the honest floor for your zip codes and vertical, and what we'd actually recommend spending. If TV isn't the right lever for your budget right now, we'll say so.",
   },
   {
     q: "How fast can we be on TV?",
-    a: "Most programs launch within 30 days of the kickoff call. The gating item is almost always creative approval — once the spot is signed off, the buy goes live quickly.",
+    a: "Most programs launch within thirty days of the kickoff call. The gating item is almost always creative approval. Once the spot is signed off, the buy goes live quickly.",
   },
   {
     q: "How will I know it's working?",
-    a: "We track calls, site visits, and lift in branded search — the same signals you're already using for the rest of your marketing. Monthly review, plain-English report, no vanity impressions.",
+    a: "We track the same signals you're already using for the rest of your marketing: the phone ringing, walk-ins, and lift in branded search. Monthly review, plain-English report, no filler.",
   },
   {
     q: "What if my market changes mid-program?",
-    a: "The buy is flexible. Zip codes, dayparts, and creative rotations can all be adjusted between months. If a sales event or seasonal push lands mid-flight, we'll re-weight the plan.",
+    a: "The buy is flexible. Zip codes, dayparts, and creative rotations can all be adjusted between months. If a sales event or seasonal push lands mid-flight, we re-weight the plan around it.",
   },
 ];
 
