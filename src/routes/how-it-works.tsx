@@ -26,31 +26,31 @@ const timeline = [
     n: "01",
     title: "Strategy call",
     body:
-      "We talk goals, market, and budget. If TV isn't the right next dollar for you, we'll say so — plainly, on the call.",
+      "We talk goals, market, and budget. If TV isn't the right next dollar for you right now, we'll say so on the call. Plainly.",
   },
   {
     n: "02",
     title: "We produce your spot",
     body:
-      "Scripted, shot, and edited in-house. Broadcast quality. Usually two to three weeks. Included in your program — not a separate line item.",
+      "Our team writes it, shoots it, and cuts the final at broadcast quality. Usually two to three weeks. Production is baked into the program, so it never lands as a separate invoice.",
   },
   {
     n: "03",
     title: "We build the buy",
     body:
-      "Live sports and premium streaming apps, in the zip codes you actually serve. Transparent fees. No station kickbacks, no forced linear bundles.",
+      "Live weekend games and the streaming apps your customers already pay for, targeted to the zip codes you actually serve. Every fee is on the page. No station kickbacks, no forced linear bundle.",
   },
   {
     n: "04",
     title: "Launch",
     body:
-      "Your ad is on TV. Most programs are live within 30 days of kickoff — sometimes faster once creative is approved.",
+      "Your commercial is on TV. Most programs go live inside 30 days of kickoff, and sometimes faster once the creative is signed off.",
   },
   {
     n: "05",
     title: "Reporting that respects you",
     body:
-      "Calls, site visits, and brand-search lift — reviewed together every month. Results compound around day 90, and we'll tell you that up front instead of after.",
+      "Calls, walk-ins, and brand-search lift — reviewed together every month in plain English. Results tend to compound around day 90, and we'll tell you that up front instead of after the fact.",
   },
 ];
 
