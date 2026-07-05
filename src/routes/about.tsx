@@ -85,7 +85,7 @@ function AboutPage() {
                 What we did there
               </div>
               <p className="mt-4">
-                We ran national streaming TV campaigns across dozens of media markets, with weekly creative rotations and daily pacing reviews. The work required transparent reporting to serious clients and creative fast enough to react to the news cycle. It's the same operating discipline we bring here.
+                We ran national streaming TV programs across dozens of media markets at once. Weekly creative rotations. Daily pacing reviews. The work required transparent reporting to serious clients and creative that could react to the news cycle by end of day. It's the same operating discipline we bring here.
               </p>
             </div>
 
