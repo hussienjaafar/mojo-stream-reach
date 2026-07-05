@@ -70,14 +70,14 @@ const independent = {
   them: [
     "Sells you their own channels",
     "Bundles inventory they need to move",
-    "Opaque fees, station-side incentives",
+    "Opaque fees and station-side incentives",
     "Pushes forced linear packages",
   ],
   us: [
     "Buys the right inventory for your goal",
     "Works only for you",
-    "Transparent fees, no station kickbacks",
-    "Streaming-first, no linear obligations",
+    "Transparent fees; no station kickbacks",
+    "Streaming-first with no linear obligation",
   ],
 };
 
