@@ -63,11 +63,12 @@ function Page() {
     <IndustryPage
       eyebrow="Legal advertising"
       h1="TV advertising for law firms."
-      subhead="Be the firm people already recognize when they need one — without a broadcast budget."
+      subhead="Be the firm people recognize before they need one."
+      /* TODO-WARSTORY: a real detail from a mid-sized firm engagement — a specific practice area, the county footprint, and what changed in intake by day 90. */
       pain={[
-        "PI TV has always worked. That's not the debate. The debate is whether it's still affordable for anyone who isn't already the biggest firm in the market.",
-        "Broadcast rates have run up. Billboard inventory is saturated. The old playbook now requires the kind of budget that boxes out every mid-sized firm trying to build a real brand.",
-        "Streaming changed the math. You get the same big-screen presence during the same shows and the same games — at a fraction of broadcast — targeted to the counties where your firm actually practices.",
+        "Personal-injury TV has always worked. That part isn't up for debate. The real question is whether it's still affordable for any firm that isn't already the biggest name on the billboard.",
+        "Broadcast rates have run up. Billboard inventory is saturated. The old playbook now needs the kind of check that quietly boxes out every mid-sized firm trying to build a real brand in its home counties.",
+        "Streaming changed the math. Same big-screen presence, during the same games and shows your future client already watches — targeted to the counties where your firm actually practices, at a fraction of what a broadcast schedule used to cost.",
       ]}
       steps={[
         {
@@ -78,17 +79,17 @@ function Page() {
         {
           n: "02",
           title: "We put it on TV",
-          body: "Streaming inventory targeted county by county, with day-parting around your intake team's coverage.",
+          body: "Streaming inventory targeted county by county, day-parted around the hours your intake team is actually staffed.",
         },
         {
           n: "03",
           title: "We show you what happened",
-          body: "Branded search lift, call volume by campaign, and case starts you can tie back to the ads that ran.",
+          body: "Branded search lift, call volume by campaign, and case starts tied back to the flights that ran.",
         },
       ]}
       runsOn={[
-        "Live sports on streaming — the appointment TV your future clients still watch live",
-        "Premium streaming apps with prestige drama and comedy",
+        "Live sports on streaming — the appointment TV your future clients still watch as it happens",
+        "The streaming apps that carry prestige drama and comedy",
         "News and lifestyle channels running in waiting rooms, kitchens, and gyms",
       ]}
       metro="Michigan"
