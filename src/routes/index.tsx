@@ -161,10 +161,10 @@ function HomePage() {
           </div>
           <div className="space-y-5 text-mojo-ink/85 text-base md:text-lg leading-relaxed">
             <p>
-              Streaming is now the majority of TV time. The living-room screen is bigger than ever — it just doesn't get its programming from a cable box anymore.
+              Most TV time now happens on streaming. The living-room screen is bigger than ever — it just stopped getting its programming from a cable box.
             </p>
             <p>
-              Ad-supported streaming changed the math. Local businesses can finally buy the big screen without broadcast budgets, and only in the neighborhoods they actually serve.
+              Ad-supported streaming rewrote the math for anyone who isn't a national brand. A local operator can finally show up on the same screen during the same shows their customers already sit down for, and only in the neighborhoods they actually serve, without writing a broadcast-sized check to do it.
             </p>
           </div>
         </div>
