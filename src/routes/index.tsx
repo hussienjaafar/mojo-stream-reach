@@ -240,10 +240,10 @@ function HomePage() {
               WHERE YOUR AD RUNS
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">
-              And that's just game day.
+              And when there's no game?
             </h2>
             <p className="mt-6 text-mojo-ink/85 text-lg leading-relaxed max-w-xl">
-              The average living room streams about four hours a night. The game takes up one of them. Here's the rest of the evening.
+              Most nights there isn't one. The TV's on for hours anyway. Here's where those hours go.
             </p>
           </div>
 
