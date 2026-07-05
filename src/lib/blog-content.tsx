@@ -70,6 +70,22 @@ const posts: Record<string, PostContent> = {
           Four things move the price more than anything else. Geography is the first: tight targeting to a handful of zip codes costs more per impression than a county-wide buy, because you're paying for precision. Inventory is the second: a live weekend game is not the same product as a late-night rerun on a free-with-ads streaming app. Season is the third: Q4 is expensive because every retailer in America is bidding on the same living rooms at the same time. Creative length rounds it out. Thirty-second spots cost more than fifteens, and the difference isn't always worth it depending on your goal.
         </P>
 
+        <H2>What makes CPMs go up?</H2>
+<P>
+          Scarcity is the honest one-word answer. When a single live weekend game concentrates a huge chunk of a market's attention into a three-hour window, everyone who wants those living rooms bids for the same slots at the same time. Add competitive dayparts around holidays, add advertisers with fresh Q4 budgets, and CPMs climb. Narrow geo targeting compounds the effect, because a small target audience inside a hot inventory window is the most expensive combination on the board.
+</P>
+<P>
+          What pulls the number down is the opposite: broad geography, ordinary weeknight inventory, and off-peak seasons. The same $10,000 flight can reach very different households depending on when you press go. A media plan built around your actual sales calendar will spend into the expensive windows only when they line up with your best selling moments — and skip them the rest of the year.
+</P>
+
+<H2>What does a good month one look like?</H2>
+<P>
+          A healthy first month has a rhythm to it. Week one is the kickoff call, the creative brief, and a script draft. Week two is production — usually a single day on your site. Week three is the final cut, sign-off, and the media plan itemized down to the zip-code map and every fee in the stack. By the end of week four, the campaign is live and the first pacing report is on your desk with plain-English notes attached.
+</P>
+<P>
+          What you should not expect in month one is a full read on results. Brand-search lift and call-volume signal need frequency and a baseline period behind them. Anyone promising you a clean ROAS number after thirty days on TV is measuring correlations, not causes. The right expectation for the first month is a working campaign, honest pacing, and the reporting infrastructure ready for month two through month six to actually tell you something.
+</P>
+
         <H2>What should a real program cost?</H2>
         <P>
           For a mid-market business in Michigan, a serious streaming TV program usually starts around $6,000 to $10,000 per month in working media, plus a transparent management fee. Below that, you can't build enough frequency across your zip codes to see brand-search actually lift. Above it, you scale by adding markets, dayparts, or live-sports adjacencies — not by spraying the same household harder and hoping something changes.
