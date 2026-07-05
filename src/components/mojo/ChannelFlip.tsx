@@ -58,10 +58,14 @@ const CHANNELS: {
   },
 ];
 
+function clamp(n: number, min: number, max: number) {
+  return Math.max(min, Math.min(max, n));
+}
+
 export function ChannelFlip() {
   const [active, setActive] = useState(0);
   const [reduced, setReduced] = useState(false);
-  const blockRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const leftColumnRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -76,43 +80,44 @@ export function ChannelFlip() {
     const desktop = window.matchMedia("(min-width: 1024px)");
     if (!desktop.matches) return;
 
-    const io = new IntersectionObserver(
-      (entries) => {
-        // Pick the entry closest to viewport center among currently-intersecting blocks.
-        const viewportCenter = window.innerHeight / 2;
-        let best: { idx: number; dist: number } | null = null;
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue;
-          const idx = Number((entry.target as HTMLElement).dataset.channelIdx);
-          const rect = entry.boundingClientRect;
-          const center = rect.top + rect.height / 2;
-          const dist = Math.abs(center - viewportCenter);
-          if (!best || dist < best.dist) best = { idx, dist };
-        }
-        if (best) setActive(best.idx);
-      },
-      {
-        // Trigger around the vertical middle of the viewport.
-        rootMargin: "-45% 0px -45% 0px",
-        threshold: 0,
-      }
-    );
+    const computeActive = () => {
+      const col = leftColumnRef.current;
+      if (!col) return;
+      const rect = col.getBoundingClientRect();
+      const viewportCenter = window.innerHeight / 2;
+      const progress = clamp(
+        (viewportCenter - rect.top) / rect.height,
+        0,
+        0.999
+      );
+      setActive(Math.floor(progress * 6));
+    };
 
-    blockRefs.current.forEach((el) => el && io.observe(el));
-    return () => io.disconnect();
+    // Run once on mount so the correct channel shows at any scroll position.
+    computeActive();
+
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        computeActive();
+        ticking = false;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
       {/* LEFT: six placement blocks in normal document flow */}
-      <div className="space-y-16 lg:space-y-40">
-        {CHANNELS.map((ch, i) => (
+      <div ref={leftColumnRef} className="space-y-16 lg:space-y-8">
+        {CHANNELS.map((ch) => (
           <div
             key={ch.code}
-            ref={(el) => {
-              blockRefs.current[i] = el;
-            }}
-            data-channel-idx={i}
+            className="lg:min-h-[55vh] flex flex-col justify-center"
           >
             <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               {ch.code} · {ch.eyebrow}
@@ -169,7 +174,7 @@ function StickyTV({
               className="absolute inset-0"
               style={{
                 opacity: i === active ? 1 : 0,
-                transition: reduced ? "none" : "opacity 300ms ease-out",
+                transition: reduced ? "none" : "opacity 200ms ease-out",
               }}
             >
               {ch.Screen()}
