@@ -19,9 +19,9 @@ const CHANNELS: {
   {
     code: "CH 02",
     eyebrow: "Free ad-supported channels",
-    title: "The endless free tier.",
+    title: "The free channels on every remote.",
     body:
-      "Pluto, Tubi, the Roku Channel — always-on programming people flip to when nothing else is queued up. Cheap inventory, real households.",
+      "The always-on channels built into every smart TV — one button, no subscription, and more viewing hours every year. Efficient reach in the exact households you pick.",
     Screen: FreeChannelsScreen,
   },
   {
@@ -29,7 +29,7 @@ const CHANNELS: {
     eyebrow: "News",
     title: "Morning coffee, evening wrap.",
     body:
-      "Local and national news streams that run in the background from the first pot of coffee to the closing headlines.",
+      "Local and national news streams that run in the background from the first pot of coffee to the closing headlines. For lawyers, doctors, and dealers, it's the frequency that makes a name feel established.",
     Screen: NewsScreen,
   },
   {
@@ -37,7 +37,7 @@ const CHANNELS: {
     eyebrow: "Lifestyle",
     title: "Kitchen on, TV on.",
     body:
-      "Food, home, and lifestyle programming that plays while dinner is cooking and the family is half-watching from the counter.",
+      "Food, home, and lifestyle programming that plays while dinner is cooking and the family is half-watching from the counter. If you fix, build, or remodel homes, this is your customer — watching someone else do it.",
     Screen: LifestyleScreen,
   },
   {
@@ -45,7 +45,7 @@ const CHANNELS: {
     eyebrow: "Movies",
     title: "Friday-night feature.",
     body:
-      "Ad-supported movie tiers on the platforms your customers already pay for — a captive audience settling in for two hours.",
+      "Ad-supported movie nights on the big streaming apps — two hours settled in on the couch, your spot in the breaks.",
     Screen: MoviesScreen,
   },
   {
@@ -53,7 +53,7 @@ const CHANNELS: {
     eyebrow: "YouTube on the TV",
     title: "The big screen, the biggest library.",
     body:
-      "Long-form YouTube watched in the living room, on the actual television — not a phone in a lap.",
+      "Long-form YouTube watched in the living room, on the actual television. The biggest screen in the house running the biggest video library on earth.",
     Screen: YouTubeTVScreen,
   },
 ];
