@@ -3,6 +3,7 @@ import { PageShell } from "@/components/mojo/PageShell";
 import { CTABand } from "@/components/mojo/CTABand";
 import { TVFrame } from "@/components/mojo/TVFrame";
 import { LiveSportsIllustration } from "@/components/mojo/LiveSportsIllustration";
+import { ChannelFlip } from "@/components/mojo/ChannelFlip";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
