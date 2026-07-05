@@ -232,6 +232,36 @@ function HomePage() {
         </div>
       </section>
 
+      {/* 5b. WHERE YOUR AD RUNS — channel flip */}
+      <section className="border-b border-mojo-border">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <div className="max-w-2xl">
+            <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
+              Where your ad runs
+            </div>
+            <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">
+              And that's just game day.
+            </h2>
+            <p className="mt-6 text-mojo-ink/85 text-lg leading-relaxed max-w-xl">
+              The average living room streams four hours a night. The game is one hour of it.
+            </p>
+          </div>
+
+          <div className="mt-14">
+            <ChannelFlip />
+          </div>
+
+          <div className="mt-16 max-w-2xl">
+            <p className="text-mojo-ink/85 text-lg leading-relaxed">
+              One campaign can run across all of it — weighted toward wherever your customers actually spend their evenings.
+            </p>
+            <p className="mt-3 text-xs text-mojo-mute">
+              Placement mix varies by market, season, and budget.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* 6. INDEPENDENT BUYER */}
       <section className="border-b border-mojo-border">
         <div className="mx-auto max-w-6xl px-6 py-24">
