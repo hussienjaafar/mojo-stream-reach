@@ -10,27 +10,27 @@ const DESCRIPTION =
 const faqs = [
   {
     q: "How much does streaming TV advertising cost for a law firm?",
-    a: "Firms typically start between $8,000 and $25,000 a month in media, depending on practice area and market. That's enough to build a real share of voice in your counties without competing head-to-head with broadcast spend. We'll size a plan on a book a call.",
+    a: "Firms typically start between $8,000 and $25,000 a month in working media, depending on practice area and market size. That level of spend builds a real share of voice across your counties without trying to trade punches with a broadcast budget you don't have. We'll size a plan on a book a call.",
   },
   {
     q: "Can you keep the creative compliant with our state bar rules?",
-    a: "Yes. Our creative team writes and produces with state bar advertising rules in mind, and we route final cuts through your firm's compliance point-person before anything airs. We've done this in multiple states.",
+    a: "Yes. Our creative team writes and produces with state bar advertising rules in the frame from the first script draft. Final cuts route through your firm's compliance point-person before anything airs. We've done this work in more than one state, and the process is the same every time.",
   },
   {
     q: "Can you target specific counties instead of a whole DMA?",
-    a: "Yes. Streaming lets us target down to the county and zip-code level, so your ad only runs where you're actually taking cases. No paying for a broadcast DMA that spills into markets you don't practice in.",
+    a: "Yes. Streaming lets us target down to the county and zip-code level, so your commercial only runs where your firm actually takes cases. You aren't paying for a broadcast DMA that spills into markets three hours away.",
   },
   {
     q: "We don't have a commercial — do we need to hire a production company?",
-    a: "No. Creative is included. We write the spot, direct the shoot, and deliver the final cuts. Most firms shoot in a single day at the office or a local location.",
+    a: "No. Creative is part of the program. We write the spot, direct the shoot, and deliver the final cuts. Most firms shoot in a single day at the office or a nearby location, and the finished commercial is yours.",
   },
   {
     q: "How do we measure this without click-through data?",
-    a: "We tie campaign flights to intake volume, branded search lift, and case starts by referral source. You'll see the movement in the intake numbers your firm already tracks — not just in a media report.",
+    a: "We tie campaign flights to intake volume, branded search lift, and case starts by referral source. The movement shows up in the intake numbers your firm already tracks — the same board the partners already look at every Monday.",
   },
   {
     q: "What's the contract length?",
-    a: "We work in 90-day flights so we can prove the model before you commit to anything longer. Most firms renew and expand from there. Book a call and we'll walk through the terms.",
+    a: "We work in ninety-day flights so we can prove the model before you commit to anything longer. Most firms renew and expand from there. Book a call and we'll walk through the terms in detail.",
   },
 ];
 
