@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "What does the reporting actually look like?",
-    a: "A monthly report tied to what actually matters: VDP views, branded search lift, showroom and service-lane traffic, and cost per action against the flights that ran. It's a working document, not a slide deck of impression counts. Book a call and we'll walk through a sample.",
+    a: "A monthly report tied to what actually matters: VDP views, branded search lift, showroom and service-lane traffic, and cost per action against the flights that ran. It reads like a working document your GM can act on. Book a call and we'll walk through a sample.",
   },
 ];
 
