@@ -103,7 +103,7 @@ export function ChannelFlip() {
   }, []);
 
   return (
-    <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
+    <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
       {/* LEFT: six placement blocks in normal document flow */}
       <div className="space-y-16 lg:space-y-40">
         {CHANNELS.map((ch, i) => (
