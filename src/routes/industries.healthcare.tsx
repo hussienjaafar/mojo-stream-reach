@@ -63,11 +63,12 @@ function Page() {
     <IndustryPage
       eyebrow="Healthcare advertising"
       h1="TV advertising for healthcare practices."
-      subhead="Build preference before patients start comparing — on the screen the household already trusts."
+      subhead="Build preference on the screen the household already trusts, before anyone opens a comparison tab."
+      /* TODO-WARSTORY: a real specialty-practice detail — e.g., an orthopedic group or dermatology practice, the drive-time radius they targeted, and the specific inquiry pattern that shifted. */
       pain={[
-        "Elective and high-lifetime-value care isn't chosen on price. It's chosen on trust — usually months before the patient ever types a search.",
-        "Search ads reach people already comparing three practices and a hospital. By then, the decision is mostly made. You're paying to be one of the finalists, not the first name they thought of.",
-        "TV builds that first-name preference. Premium streaming environments, household targeting near your locations, and creative that sounds like a doctor — not a promo.",
+        "Elective and high-lifetime-value care isn't chosen on price. It's chosen on trust — a quiet decision that gets made in the kitchen, weeks or months before anyone ever types a search.",
+        "Search ads reach people who are already comparing three practices and a hospital system. By that point the decision is mostly done. You're paying to be one of the finalists rather than the first name that came up over dinner.",
+        "TV builds that first-name preference in the room where the decision actually happens. Household targeting around your locations, credible on-camera talent, and creative that sounds like a doctor talking to a neighbor.",
       ]}
       steps={[
         {
@@ -78,17 +79,17 @@ function Page() {
         {
           n: "02",
           title: "We put it on TV",
-          body: "Streaming inventory targeted to households within your realistic service radius — not a whole state.",
+          body: "Streaming inventory targeted to households inside a realistic drive-time radius of each location.",
         },
         {
           n: "03",
           title: "We show you what happened",
-          body: "New-patient inquiries, branded search lift, and appointment requests tied back to the campaign.",
+          body: "New-patient inquiries, branded search lift, and appointment requests tied back to the flights that ran.",
         },
       ]}
       runsOn={[
-        "Live sports on streaming — the co-viewing window when households are actually together",
-        "Premium streaming apps with prestige series and family programming",
+        "Live weekend games — the co-viewing window when the household is actually in the same room",
+        "The streaming apps that carry prestige series and family programming",
         "News and lifestyle channels that run through the morning and evening routine",
       ]}
       metro="Michigan"
