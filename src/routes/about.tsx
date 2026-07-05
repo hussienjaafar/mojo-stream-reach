@@ -76,7 +76,7 @@ function AboutPage() {
                 Where we come from
               </div>
               <p className="mt-4">
-                Mojo was built in political and advocacy media — where budgets are unforgiving, deadlines are absolute, and there is no rescheduling election day. You either hit the market on time, on target, and on message, or you lose. That environment teaches you what "good enough" isn't.
+                Mojo was built inside political and advocacy media, where budgets are unforgiving, deadlines are absolute, and nobody reschedules election day for you. You either hit the market on time, on target, and on message — or you lose. That environment teaches you what "good enough" isn't.
               </p>
             </div>
 
