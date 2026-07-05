@@ -10,27 +10,27 @@ const DESCRIPTION =
 const faqs = [
   {
     q: "How much does streaming TV advertising cost for a healthcare practice?",
-    a: "Practices and groups typically start between $5,000 and $20,000 a month in media, depending on service line and geography. That's enough to hold a real share of voice in the neighborhoods around your locations. We'll size the right plan on a book a call.",
+    a: "Practices and groups typically start between $5,000 and $20,000 a month in working media, depending on service line and geography. That range holds a real share of voice across the neighborhoods that sit inside a reasonable drive time from your front door. We'll size the right plan on a book a call.",
   },
   {
     q: "Can you keep our targeting and creative compliant with healthcare rules?",
-    a: "Yes. We keep targeting compliant for healthcare advertisers — no sensitive-condition targeting, no health-status inference. Creative is reviewed with your compliance point-person before anything airs, and we're familiar with the guardrails around patient testimonials and outcome claims.",
+    a: "Yes. Targeting stays inside the healthcare rulebook — no sensitive-condition segments, no health-status inference. Every cut runs past your compliance point-person before it airs. We're familiar with the guardrails around patient testimonials and outcome claims.",
   },
   {
     q: "Can you target households near our specific locations?",
-    a: "Yes. Streaming lets us target down to the zip code, so your ad runs only in a realistic drive-time radius around each location — not across an entire broadcast market.",
+    a: "Yes. Streaming lets us target down to the zip code, so your ad runs only inside a realistic drive-time radius around each location. You won't be paying to reach families two counties over who will never book an appointment with you.",
   },
   {
     q: "We don't have a commercial — is that a problem?",
-    a: "Not at all. Creative is included. We write the spot with your clinical team, shoot on-site or at a nearby location, and deliver the final cuts. Most practices shoot in a single day.",
+    a: "No. Creative is part of the program. We write the spot with your clinical team, shoot on-site or at a nearby location, and deliver the final cuts. Most practices wrap production in a single day.",
   },
   {
     q: "How do we measure this without patients clicking a TV ad?",
-    a: "We track new-patient inquiries, branded search lift, appointment-request forms, and — where possible — household-level visit attribution. You'll see the numbers move in the systems your practice already uses.",
+    a: "We track new-patient inquiries, branded search lift, appointment-request forms, and — where the data supports it — household-level visit attribution. The numbers move in the same systems your practice already reviews at the monthly meeting.",
   },
   {
     q: "How fast can we launch?",
-    a: "From signed agreement to on-air is typically three to four weeks, most of it in production and compliance review. If you already have usable creative, we can move faster. Book a call and we'll walk through your timeline.",
+    a: "From signed agreement to on-air is typically three to four weeks. Most of that window is production and compliance review. If you already have usable creative, we can move faster. Book a call and we'll walk through your timeline.",
   },
 ];
 
@@ -63,11 +63,12 @@ function Page() {
     <IndustryPage
       eyebrow="Healthcare advertising"
       h1="TV advertising for healthcare practices."
-      subhead="Build preference before patients start comparing — on the screen the household already trusts."
+      subhead="Build preference on the screen the household already trusts, before anyone opens a comparison tab."
+      /* TODO-WARSTORY: a real specialty-practice detail — e.g., an orthopedic group or dermatology practice, the drive-time radius they targeted, and the specific inquiry pattern that shifted. */
       pain={[
-        "Elective and high-lifetime-value care isn't chosen on price. It's chosen on trust — usually months before the patient ever types a search.",
-        "Search ads reach people already comparing three practices and a hospital. By then, the decision is mostly made. You're paying to be one of the finalists, not the first name they thought of.",
-        "TV builds that first-name preference. Premium streaming environments, household targeting near your locations, and creative that sounds like a doctor — not a promo.",
+        "Elective and high-lifetime-value care isn't chosen on price. It's chosen on trust — a quiet decision that gets made in the kitchen, weeks or months before anyone ever types a search.",
+        "Search ads reach people who are already comparing three practices and a hospital system. By that point the decision is mostly done. You're paying to be one of the finalists rather than the first name that came up over dinner.",
+        "TV builds that first-name preference in the room where the decision actually happens. Household targeting around your locations, credible on-camera talent, and creative that sounds like a doctor talking to a neighbor.",
       ]}
       steps={[
         {
@@ -78,17 +79,17 @@ function Page() {
         {
           n: "02",
           title: "We put it on TV",
-          body: "Streaming inventory targeted to households within your realistic service radius — not a whole state.",
+          body: "Streaming inventory targeted to households inside a realistic drive-time radius of each location.",
         },
         {
           n: "03",
           title: "We show you what happened",
-          body: "New-patient inquiries, branded search lift, and appointment requests tied back to the campaign.",
+          body: "New-patient inquiries, branded search lift, and appointment requests tied back to the flights that ran.",
         },
       ]}
       runsOn={[
-        "Live sports on streaming — the co-viewing window when households are actually together",
-        "Premium streaming apps with prestige series and family programming",
+        "Live weekend games — the co-viewing window when the household is actually in the same room",
+        "The streaming apps that carry prestige series and family programming",
         "News and lifestyle channels that run through the morning and evening routine",
       ]}
       metro="Michigan"

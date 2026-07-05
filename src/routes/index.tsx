@@ -27,19 +27,19 @@ const steps = [
     n: "01",
     title: "We make your spot",
     body:
-      "Scripted, shot, and edited in-house. Broadcast quality. Included — not a line item.",
+      "Our crew writes the script, shoots on your site, and cuts the final at broadcast quality. Production is baked into the program, so there's no separate invoice waiting after launch.",
   },
   {
     n: "02",
     title: "We put it on TV",
     body:
-      "Live sports and premium streaming apps, in the zip codes you choose. No wasted impressions three states over.",
+      "The buy runs during live sports and the streaming apps people already pay for — targeted down to the zip codes you actually cover. Households outside your service map never see it.",
   },
   {
     n: "03",
     title: "We show you what happened",
     body:
-      "Calls, visits, and search lift you can tie back to the campaign. Not vanity impressions.",
+      "The phone ringing. Walk-ins on Saturday. Branded search climbing week over week — all of it tied back to the flights that ran. Not vanity impressions.",
   },
 ];
 
@@ -70,14 +70,14 @@ const independent = {
   them: [
     "Sells you their own channels",
     "Bundles inventory they need to move",
-    "Opaque fees, station-side incentives",
+    "Opaque fees and station-side incentives",
     "Pushes forced linear packages",
   ],
   us: [
     "Buys the right inventory for your goal",
     "Works only for you",
-    "Transparent fees, no station kickbacks",
-    "Streaming-first, no linear obligations",
+    "Transparent fees; no station kickbacks",
+    "Streaming-first with no linear obligation",
   ],
 };
 
@@ -95,8 +95,9 @@ function HomePage() {
               Remember when TV advertising meant a $50,000 handshake?
             </h1>
             <p className="mt-6 text-lg text-mojo-mute max-w-2xl leading-relaxed">
-              It doesn't anymore. Your ad — during live sports and the biggest streaming shows — shown only to the households you choose. Measured like the rest of your marketing.
+              It doesn't anymore. Your commercial runs during the football game your neighbor is watching after dinner, shown only in the zip codes you draw customers from, and tied back to the phone that rings on Monday morning. That's the whole pitch.
             </p>
+            {/* TODO-WARSTORY: a real one-sentence example the founder can stand behind — e.g., a specific Michigan zip cluster where a home-services client saw first-call volume move inside 60 days. */}
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/contact"
@@ -160,10 +161,10 @@ function HomePage() {
           </div>
           <div className="space-y-5 text-mojo-ink/85 text-base md:text-lg leading-relaxed">
             <p>
-              Streaming is now the majority of TV time. The living-room screen is bigger than ever — it just doesn't get its programming from a cable box anymore.
+              Most TV time now happens on streaming. The living-room screen is bigger than ever — it just stopped getting its programming from a cable box.
             </p>
             <p>
-              Ad-supported streaming changed the math. Local businesses can finally buy the big screen without broadcast budgets, and only in the neighborhoods they actually serve.
+              Ad-supported streaming rewrote the math for anyone who isn't a national brand. A local operator can finally show up on the same screen during the same shows their customers already sit down for, and only in the neighborhoods they actually serve, without writing a broadcast-sized check to do it.
             </p>
           </div>
         </div>
@@ -216,7 +217,7 @@ function HomePage() {
               Yes — during the game.
             </h2>
             <p className="mt-6 text-lg text-mojo-ink/85 leading-relaxed max-w-xl">
-              Live sports on streaming TV used to be untouchable for local budgets. Now your ad can run during the games your customers watch, in your market, at a fraction of old broadcast costs.
+              Live sports on streaming used to be untouchable for a local budget. It isn't anymore. Your commercial can run during the same weekend game your customers are already gathered around, in your market, at a fraction of what broadcast used to cost — and the household that saw it can be counted the next day.
             </p>
             <p className="mt-4 text-xs text-mojo-mute">
               Availability varies by season and platform.
@@ -267,7 +268,7 @@ function HomePage() {
               We don't sell you our inventory. We buy you the right inventory.
             </h2>
             <p className="mt-6 text-mojo-mute text-lg leading-relaxed">
-              Most TV sellers are tied to a station or a network — they win when they move their own bundle. We work the other way around.
+              Most TV sellers are tied to a station or a network, which means they win when they move their own bundle. We work the other way around. Your goal drives the buy, and the buy goes wherever your customer actually is.
             </p>
           </div>
 

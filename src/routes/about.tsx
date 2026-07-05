@@ -18,17 +18,17 @@ const values = [
   {
     title: "Transparent fees",
     body:
-      "You see the media cost, the production cost, and our fee. No station-side kickbacks. No bundled markup buried in a plan.",
+      "You see the media cost, the production cost, and our fee — each on its own line, in the same document. No station-side kickbacks. No bundled markup buried three tabs deep in a plan.",
   },
   {
     title: "Creative included",
     body:
-      "Broadcast-quality production is part of the program, not an upsell. Scripted, shot, and edited by our in-house team.",
+      "Broadcast-quality production is part of the program, never an upsell. Our in-house team handles it from first script through final delivery.",
   },
   {
     title: "Honest measurement",
     body:
-      "Calls, visits, and brand-search lift — the numbers that actually move a business. Reviewed together every month, in plain English.",
+      "The phone ringing. Walk-ins on Saturday. Brand searches climbing week over week. That's what we report on, reviewed together every month in plain English.",
   },
 ];
 
@@ -76,7 +76,7 @@ function AboutPage() {
                 Where we come from
               </div>
               <p className="mt-4">
-                Mojo was built in political and advocacy media — where budgets are unforgiving, deadlines are absolute, and there is no rescheduling election day. You either hit the market on time, on target, and on message, or you lose. That environment teaches you what "good enough" isn't.
+                Mojo was built inside political and advocacy media, where budgets are unforgiving, deadlines are absolute, and nobody reschedules election day for you. You either hit the market on time, on target, and on message — or you lose. That environment teaches you what "good enough" isn't.
               </p>
             </div>
 
@@ -85,7 +85,7 @@ function AboutPage() {
                 What we did there
               </div>
               <p className="mt-4">
-                We ran national streaming TV campaigns across dozens of media markets, with weekly creative rotations and daily pacing reviews. The work required transparent reporting to serious clients and creative fast enough to react to the news cycle. It's the same operating discipline we bring here.
+                We ran national streaming TV programs across dozens of media markets at once. Weekly creative rotations. Daily pacing reviews. The work required transparent reporting to serious clients and creative that could react to the news cycle by end of day. It's the same operating discipline we bring here.
               </p>
             </div>
 
@@ -94,7 +94,7 @@ function AboutPage() {
                 Why Mojo, why now
               </div>
               <p className="mt-4">
-                Streaming finally made the big screen affordable for local businesses — but the buying landscape is still a mess of station reps, bundled inventory, and creative bills that arrive separately. So we brought the political-media playbook — and an in-house creative studio — home to Michigan businesses. Same discipline. Different scoreboard.
+                Streaming finally made the big screen affordable for a local operator. The buying landscape around it, though, is still a mess of station reps, bundled inventory, and creative bills that arrive on separate letterhead. So we brought the political-media playbook — and an in-house creative studio — home to Michigan. Same discipline. Different scoreboard.
               </p>
             </div>
           </div>
