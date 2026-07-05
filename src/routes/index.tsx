@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/mojo/PageShell";
 import { CTABand } from "@/components/mojo/CTABand";
 import { TVFrame } from "@/components/mojo/TVFrame";
+import { LiveSportsIllustration } from "@/components/mojo/LiveSportsIllustration";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -224,35 +225,8 @@ function HomePage() {
             </p>
           </div>
 
-          {/* Stylized couch + stadium line art — no logos, no league marks */}
           <div className="flex justify-center">
-            <svg
-              viewBox="0 0 400 280"
-              className="w-full max-w-md"
-              fill="none"
-              stroke="var(--mojo-clay)"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              {/* Stadium arc */}
-              <path d="M40 90 Q200 20 360 90" />
-              <path d="M60 100 Q200 40 340 100" opacity="0.5" />
-              {/* Field */}
-              <ellipse cx="200" cy="140" rx="150" ry="30" />
-              <line x1="200" y1="110" x2="200" y2="170" opacity="0.5" />
-              {/* Couch */}
-              <rect x="80" y="200" width="240" height="55" rx="10" />
-              <line x1="80" y1="220" x2="320" y2="220" />
-              <line x1="200" y1="220" x2="200" y2="255" />
-              {/* Couch legs */}
-              <line x1="95" y1="255" x2="95" y2="268" />
-              <line x1="305" y1="255" x2="305" y2="268" />
-              {/* Little TV on floor left */}
-              <rect x="20" y="230" width="40" height="26" rx="3" />
-              <line x1="30" y1="260" x2="50" y2="260" />
-            </svg>
+            <LiveSportsIllustration className="w-full max-w-md" />
           </div>
         </div>
       </section>
