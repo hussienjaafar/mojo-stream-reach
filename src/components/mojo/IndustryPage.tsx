@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { PageShell } from "./PageShell";
 import { CTABand } from "./CTABand";
 import { TVFrame } from "./TVFrame";
-import { ChannelFlip } from "./ChannelFlip";
 import {
   Accordion,
   AccordionContent,
@@ -100,8 +99,8 @@ export function IndustryPage(p: IndustryPageProps) {
 
       {/* 4. WHERE YOUR AD RUNS */}
       <section className="bg-mojo-cream-2 border-b border-mojo-border">
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <div className="max-w-2xl">
+        <div className="mx-auto max-w-6xl px-6 py-24 grid gap-12 md:grid-cols-2 items-center">
+          <div>
             <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
               Where your ad runs
             </div>
@@ -112,9 +111,34 @@ export function IndustryPage(p: IndustryPageProps) {
               Premium streaming environments — the same shows your customers already watch — bought only in the zip codes you serve.
             </p>
           </div>
-          <div className="mt-14">
-            <ChannelFlip />
-          </div>
+          <TVFrame>
+            <div className="p-8 md:p-10 bg-mojo-cream">
+              <ul className="space-y-5">
+                {p.runsOn.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-3 items-start text-mojo-ink"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      stroke="var(--mojo-clay)"
+                      strokeWidth="1.75"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="mt-1 shrink-0"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 10.5l4 4 8-9" />
+                    </svg>
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </TVFrame>
         </div>
       </section>
 
