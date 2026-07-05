@@ -18,17 +18,17 @@ const values = [
   {
     title: "Transparent fees",
     body:
-      "You see the media cost, the production cost, and our fee. No station-side kickbacks. No bundled markup buried in a plan.",
+      "You see the media cost, the production cost, and our fee — each on its own line, in the same document. No station-side kickbacks. No bundled markup buried three tabs deep in a plan.",
   },
   {
     title: "Creative included",
     body:
-      "Broadcast-quality production is part of the program, not an upsell. Scripted, shot, and edited by our in-house team.",
+      "Broadcast-quality production is part of the program, never an upsell. Our in-house team handles it from first script through final delivery.",
   },
   {
     title: "Honest measurement",
     body:
-      "Calls, visits, and brand-search lift — the numbers that actually move a business. Reviewed together every month, in plain English.",
+      "The phone ringing. Walk-ins on Saturday. Brand searches climbing week over week. That's what we report on, reviewed together every month in plain English.",
   },
 ];
 
