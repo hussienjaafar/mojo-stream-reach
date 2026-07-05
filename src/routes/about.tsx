@@ -94,7 +94,7 @@ function AboutPage() {
                 Why Mojo, why now
               </div>
               <p className="mt-4">
-                Streaming finally made the big screen affordable for local businesses — but the buying landscape is still a mess of station reps, bundled inventory, and creative bills that arrive separately. So we brought the political-media playbook — and an in-house creative studio — home to Michigan businesses. Same discipline. Different scoreboard.
+                Streaming finally made the big screen affordable for a local operator. The buying landscape around it, though, is still a mess of station reps, bundled inventory, and creative bills that arrive on separate letterhead. So we brought the political-media playbook — and an in-house creative studio — home to Michigan. Same discipline. Different scoreboard.
               </p>
             </div>
           </div>
