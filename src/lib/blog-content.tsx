@@ -36,82 +36,52 @@ const posts: Record<string, PostContent> = {
     body: (
       <>
         <Lead>
-          The honest answer is: it depends — and any agency that quotes you a
-          number before asking about your market, your zip codes, and your goals
-          is either guessing or hiding fees. Here's how streaming TV pricing
-          actually works, in plain English.
+          The honest answer is: it depends. Any agency that quotes you a firm number before asking about your market, your zip codes, and the goal you're actually trying to hit is either guessing or hiding something. Here is how streaming TV pricing works in plain English, with the fee stack drawn on the same page as the CPM.
         </Lead>
+
+        {/* TODO-WARSTORY: a real CPM the founder can stand behind — e.g., "the last home-services flight we ran in metro Detroit cleared at $X on live-weekend inventory." */}
 
         <H2>What is a CPM, and what should mine be?</H2>
         <P>
-          CPM means cost per thousand impressions — the price to show your ad
-          to one thousand households. On streaming TV, working CPMs for
-          mid-market advertisers typically land between $25 and $55. Live sports
-          sit at the top of that range. General-entertainment streaming apps
-          sit lower. Highly targeted inventory — a specific zip cluster during a
-          specific game — costs more than a broad national buy, because you're
-          asking for a smaller, more valuable slice.
+          CPM means cost per thousand impressions. It's the price to show your commercial to one thousand households. For a mid-market advertiser on streaming, working CPMs generally land somewhere between $25 and $55. Live sports sit at the top of that range because everyone wants them at the same time. General-entertainment streaming apps sit lower. Highly targeted inventory — a specific zip cluster during a specific weekend game — costs more than a broad national buy, because you're asking for a smaller and more valuable slice.
         </P>
         <P>
-          A $35 CPM sounds abstract until you translate it. $10,000 of media at
-          a $35 CPM is about 285,000 impressions. In a mid-sized Michigan
-          market, that's enough frequency in your target zip codes to move the
-          needle on brand-search and inbound calls over a 90-day flight.
+          A $35 CPM stays abstract until you translate it. Ten thousand dollars of working media at that price is roughly 285,000 impressions. In a mid-sized Michigan market, that's enough frequency across your target zip codes to move branded search and inbound calls inside a ninety-day flight. That's the number a business owner can actually feel.
         </P>
 
         <H2>What is the fee stack, and why does it matter?</H2>
         <P>
-          The number on your invoice is rarely the number the TV app receives.
-          Between you and the ad slot are usually four to six layers, each
-          taking a cut:
+          The number on your invoice is rarely the number the TV app on the other end actually receives. Between you and the ad slot are usually four to six layers, each one quietly taking a cut before the money reaches the screen:
         </P>
         <UL>
           <li>Your agency or reseller fee (often 15–25%).</li>
-          <li>The demand-side platform (DSP) tech fee (5–15%).</li>
-          <li>Data and targeting fees for audience segments (3–10%).</li>
+          <li>The demand-side platform tech fee (5–15%).</li>
+          <li>Data and audience-segment fees (3–10%).</li>
           <li>Verification and measurement partners (2–5%).</li>
-          <li>The supply-side platform (SSP) fee on the publisher side.</li>
+          <li>The supply-side platform fee on the publisher side.</li>
           <li>The publisher's own take, before the CPM you actually paid.</li>
         </UL>
         <P>
-          Stack all of that and it's common for 40–60% of your budget to be
-          absorbed before an ad ever renders on a TV. That's the "tech tax"
-          nobody wants to talk about. It's not evil — every layer does
-          something — but if no one shows you the stack, you can't judge
-          whether you're getting value.
+          Stack all of that and it's common for 40–60% of your budget to be absorbed before an ad ever renders on a television. That's the tech tax nobody wants to draw on the whiteboard. It isn't sinister — every layer does something — but if no one shows you the stack, you can't judge whether the layers are earning their keep.
         </P>
 
         <H2>What drives the number up or down?</H2>
         <P>
-          Four things move price more than anything else. Geography: tight
-          targeting to a handful of zips costs more per impression than a
-          county-wide buy. Inventory: live NFL is not the same product as a
-          late-night rerun on a free-with-ads streaming app. Season: fourth
-          quarter is expensive because every retailer in America wants the same
-          audience. Creative length: 30-second spots cost more than 15s, and
-          the difference is not always worth it.
+          Four things move the price more than anything else. Geography is the first: tight targeting to a handful of zip codes costs more per impression than a county-wide buy, because you're paying for precision. Inventory is the second: a live weekend game is not the same product as a late-night rerun on a free-with-ads streaming app. Season is the third: Q4 is expensive because every retailer in America is bidding on the same living rooms at the same time. Creative length rounds it out. Thirty-second spots cost more than fifteens, and the difference isn't always worth it depending on your goal.
         </P>
 
         <H2>What should a real program cost?</H2>
         <P>
-          For a mid-market business in Michigan, a serious streaming TV program
-          usually starts around $6,000–$10,000 per month in working media, plus
-          a transparent management fee. Under that, you can't build enough
-          frequency in your zip codes to see brand-search lift. Above it, you
-          scale by adding markets, dayparts, or sports adjacencies — not by
-          spraying the same audience harder.
+          For a mid-market business in Michigan, a serious streaming TV program usually starts around $6,000 to $10,000 per month in working media, plus a transparent management fee. Below that, you can't build enough frequency across your zip codes to see brand-search actually lift. Above it, you scale by adding markets, dayparts, or live-sports adjacencies — not by spraying the same household harder and hoping something changes.
         </P>
 
         <H2>Why transparent fees matter</H2>
         <P>
-          If your agency won't itemize the fee stack, you're not being told
-          what's actually happening to your money. That's the whole reason we
-          quote our management fee separately from working media, show you the
-          zip-code map, and put the tech and data fees on the same page as the
-          CPM. It's your budget. You should see where every dollar goes.
+          If your agency won't itemize the stack, you're not being told what's actually happening to your money. That's the whole reason we quote our management fee separately from working media, put the zip-code map in your hands, and list the tech and data fees on the same page as the CPM. It's your budget. You should be able to see where every dollar in it went.
         </P>
         <P>
-          Want a real number for your market? <a className="text-mojo-clay underline underline-offset-4 hover:text-mojo-clay-deep" href="/free-audit">Book a free audit</a>{" "}
+          Want a real number for your specific market?{" "}
+          <a className="text-mojo-clay underline underline-offset-4 hover:text-mojo-clay-deep" href="/free-audit">Book a free audit</a>{" "}
           and we'll build the fee-transparent version for your zip codes.
         </P>
       </>
@@ -126,77 +96,45 @@ const posts: Record<string, PostContent> = {
     body: (
       <>
         <Lead>
-          The self-serve dashboards are impressive. Log in, upload a video,
-          pick an audience, launch. If it feels a little too easy, that's
-          because the hard parts have been quietly outsourced to you. Here's
-          the honest version of what you're signing up for.
+          The self-serve dashboards look great. Log in, upload a video, pick an audience, launch. If it feels a little too easy, that's because the hard parts have been quietly outsourced to you. Here is the honest version of what you're signing up for when you punch in a credit card.
         </Lead>
 
-        <H2>The inventory is not what you think</H2>
+        {/* TODO-WARSTORY: a real example of an owner who ran a self-serve buy first — the platform, the CPM they thought they were paying, and what the actual working media turned out to be. */}
+
+        <H2>The inventory is not what you think it is</H2>
         <P>
-          The pitch usually implies you're buying "Hulu" or "premium streaming."
-          The reality is a mixed bag: some premium apps, plenty of long-tail
-          free-with-ads services, and a lot of app inventory you've never heard
-          of. Without a human curating what runs where, your spot can end up
-          against content that doesn't match your brand — and there's no
-          easy toggle on a self-serve dashboard to fix it after the fact.
+          The pitch usually implies you're buying "premium streaming." The reality is a mixed bag — some genuinely premium apps, plenty of long-tail free-with-ads services, and a surprising amount of app inventory you've never heard of. Without a human curating what runs where, your commercial can end up against content that doesn't match your brand at all. There is no easy toggle on a self-serve dashboard to fix that after the fact. You find out from the report, if you find out at all.
         </P>
 
         <H2>The fees are real, they're just not on the invoice</H2>
         <P>
-          Self-serve platforms often advertise "no management fee." That is
-          true and misleading at the same time. The platform still takes a
-          margin — it's just baked into the CPM instead of listed as a line
-          item. You can't tell whether you paid $30 or $52 to reach a thousand
-          households, because the working portion isn't disclosed. If you
-          can't see the fee, you can't negotiate it, and you can't compare it.
+          Self-serve platforms often advertise "no management fee." That is both true and misleading at the same time. The platform still takes a margin. It's just baked into the CPM instead of listed as a line item, which means you can't tell whether you paid $30 or $52 to reach a thousand households. The working portion isn't disclosed. If you can't see the fee, you can't negotiate it, and you have no way to compare it to another buy.
         </P>
 
         <H2>You are now the creative department</H2>
         <P>
-          Great streaming TV creative — a 30-second spot that actually
-          converts on the big screen — is a real production. Script, talent,
-          location, lighting, sound, edit, color, captions, and a version
-          library for different flights. Self-serve platforms will happily
-          let you upload the phone-shot video you have. They will not tell
-          you that most of them are why the campaign underperformed.
+          Great streaming TV creative — a spot that actually converts on a fifty-inch living-room screen — is a real production. Script, talent, location, lighting, sound, edit, color, captions, and a version library for different flights. Self-serve platforms will happily let you upload the phone-shot video you already have on your marketing drive. They will not tell you that most of the campaign's underperformance traces back to that upload.
         </P>
         <P>
-          If you're going to spend real money on the media, the creative is
-          not the place to save. This is why we include broadcast-quality
-          production in every Mojo program — the creative and the buy have to
-          come from the same conversation, or neither one works.
+          If you're going to spend real money on the media, the creative is the last place to save. That's why we include broadcast-quality production in every Mojo program. The creative and the buy have to come from the same conversation, or neither one of them works.
         </P>
 
         <H2>Measurement is a project, not a checkbox</H2>
         <P>
-          Impression counts are easy to produce. Impression counts don't run
-          your business. What you actually need is a read on incremental
-          calls, site visits from your target zips, and lift in branded
-          search. Setting that up means UTM discipline, call tracking on
-          landing pages, and a baseline period before the campaign starts.
-          The self-serve dashboard will not do any of that for you.
+          Impression counts are easy to produce. Impression counts do not run your business. What you actually need is a read on incremental calls, walk-ins from your target zip codes, and lift in branded search over a baseline period. Setting that up means UTM discipline, call tracking on the landing pages, and a clean pre-campaign window to compare against. The self-serve dashboard will not do any of that for you.
         </P>
         <P>
-          When someone tells you their platform "proves ROAS," ask how the
-          incrementality was measured. If the answer is "our attribution
-          model," you have a modelled number, not a measured one. Both have
-          a place — but they are not the same thing.
+          When someone tells you their platform "proves ROAS," ask exactly how the incrementality was measured. If the answer is "our attribution model," you have a modelled number rather than a measured one. Both have a place, but they are very different things. Confuse them and you'll spend real money on a report that only ever tells you what you already believed.
         </P>
 
-        <H2>When self-serve is fine, and when it's not</H2>
+        <H2>When self-serve is fine, and when it isn't</H2>
         <P>
-          If you have a strong in-house creative team, a media analyst who
-          lives in dashboards, and a budget you're comfortable spending as
-          tuition, self-serve platforms are a reasonable place to learn. If
-          you're a mid-market operator whose day is running your business,
-          self-serve is a slow way to spend real money on the wrong
-          impressions.
+          If you have a strong in-house creative team, a media analyst who lives in dashboards all day, and a budget you're comfortable spending as tuition, self-serve platforms are a reasonable place to learn. If you're a mid-market operator whose day is already spent running a company, self-serve is a slow way to spend real money on the wrong impressions.
         </P>
         <P>
-          Not sure which one you are? <a className="text-mojo-clay underline underline-offset-4 hover:text-mojo-clay-deep" href="/free-audit">Send us your current plan</a>{" "}
-          and we'll give you an honest read — even if the honest read is
-          "keep doing what you're doing."
+          Not sure which one you are?{" "}
+          <a className="text-mojo-clay underline underline-offset-4 hover:text-mojo-clay-deep" href="/free-audit">Send us your current plan</a>{" "}
+          and we'll give you an honest read. Even if the honest read is "keep doing what you're doing."
         </P>
       </>
     ),
@@ -211,77 +149,50 @@ const posts: Record<string, PostContent> = {
     body: (
       <>
         <Lead>
-          Your account rep at the station has always been good to you. They
-          just pitched a streaming package on top of your usual buy, and it
-          looks easy. Before you sign, here's what a fee-transparent
-          independent buyer sees when they read that same proposal.
+          Your account rep at the station has always been good to you. They just pitched a streaming package on top of your usual buy, and it looks easy. Before you sign, here is what a fee-transparent, independent buyer sees when they read that same proposal cold.
         </Lead>
+
+        {/* TODO-WARSTORY: a real station-vs-independent proposal comparison the founder has personally read — what the two working CPMs turned out to be after fees were exposed. */}
 
         <H2>Stations are genuinely good at what they do</H2>
         <P>
-          Local TV stations have real assets: live news, live sports rights,
-          strong local relationships, and production teams that can turn
-          around a spot fast. If you're buying broadcast, the station is
-          often the right call. None of what follows is a knock on the
-          people at your station.
+          Local TV stations have real assets: live news, live weekend games, deep relationships across the market, and production teams that can turn a spot around in a hurry. If you're buying broadcast, the station is often the right call. Nothing that follows is a knock on the people at your station. They know their inventory cold, and their linear product is often exactly what a certain kind of buy needs.
         </P>
 
-        <H2>The streaming package is usually not their strongest product</H2>
+        <H2>Their streaming package is usually not their strongest product</H2>
         <P>
-          Station streaming offers are frequently packaged with linear buys,
-          resold from a partner platform, or built on a limited inventory
-          set the station has direct access to. That means:
+          Station streaming offers are frequently packaged with a linear buy, resold from a partner platform, or built on a narrow inventory pool the station has direct access to. That means:
         </P>
         <UL>
           <li>Targeting is often coarser than a dedicated CTV buy.</li>
-          <li>Inventory is narrower — mostly the station's own OTT app plus a resold pool.</li>
-          <li>The fee structure is bundled with linear, so the streaming CPM is hard to isolate.</li>
-          <li>Reporting tends to be impression counts, not conversion-side signals.</li>
+          <li>Inventory is narrower — the station's own OTT app plus a resold pool.</li>
+          <li>Fee structure is bundled with linear, so the streaming CPM is nearly impossible to isolate.</li>
+          <li>Reporting is usually impression counts, not conversion signals.</li>
         </UL>
 
         <H2>The incentive is the important part</H2>
         <P>
-          A station rep gets paid to sell station inventory. That's not a
-          scandal — that's their job. But when you ask "should I add
-          streaming?" the honest answer, for them, is almost always yes,
-          because they have a streaming product to sell. An independent
-          buyer with no ownership in any single publisher can tell you
-          "yes, but not this one" or "not yet" without losing a commission.
+          A station rep gets paid to sell station inventory. That isn't a scandal. It's the job description. But when you ask them "should I add streaming?" the honest answer, for them, is almost always yes — because they have a streaming product on the shelf they need to move. An independent buyer with no ownership stake in any single publisher can answer differently. They can say "yes, but not this one," or "not yet," and no commission dies on the table when they do.
         </P>
 
         <H2>When the station offer is the right answer</H2>
         <P>
-          Take it when: you want incremental reach on the station's own OTT
-          app, you're already spending meaningful linear dollars there and
-          the streaming add is priced as a genuine bonus, or you have a
-          local-news adjacency you specifically want to sponsor. In those
-          cases the fit is real.
+          Take it when you want incremental reach on the station's own OTT app and its audience overlaps yours cleanly. Take it when you're already spending meaningful linear dollars with them and the streaming add is priced as a real bonus rather than repriced margin. Take it when there is a specific local-news adjacency you want to sponsor. In those cases the fit is real, the price is fair, and the reporting question stops mattering as much.
         </P>
 
         <H2>When to hold off</H2>
         <P>
-          Hold off when: streaming is the majority of your intended TV
-          budget, you want tight zip-code targeting across multiple premium
-          apps, you need live-sports inventory beyond what the station
-          carries, or you can't get a fee-transparent breakdown of the CPM
-          for the streaming portion. Any one of those means the station
-          package is probably not the right home for that dollar.
+          Hold off when streaming is going to be the majority of your intended TV budget. Hold off when you want tight zip-code targeting across multiple premium apps. Hold off when you need live-sports inventory beyond what the station itself carries. Hold off when you can't get a fee-transparent breakdown of the CPM for the streaming portion, separated from anything linear. Any one of those alone means the station package is probably not the right home for that dollar.
         </P>
 
         <H2>How to compare the two proposals fairly</H2>
         <P>
-          Ask both the station and an independent buyer for the same four
-          things: the list of apps and inventory their buy will run on, the
-          zip codes and audience it will reach, the working CPM after fees,
-          and how they will measure conversions — not impressions. Put the
-          two side by side. The right answer usually becomes obvious in
-          about ten minutes.
+          Ask both the station and an independent buyer for the same four things: the list of apps and inventory your buy will actually run on, the zip codes and audience it will reach, the working CPM after every fee is exposed, and how they will measure conversions instead of impressions. Put the two proposals side by side on your desk. The right answer usually becomes obvious inside ten minutes.
         </P>
         <P>
-          Want an independent second opinion?{" "}
+          Want an independent second opinion on the proposal in front of you?{" "}
           <a className="text-mojo-clay underline underline-offset-4 hover:text-mojo-clay-deep" href="/free-audit">Book a free audit</a>{" "}
-          and we'll read the proposal with you. If the station's offer is the
-          right one, we'll tell you that too.
+          and we'll read it with you. If the station's offer turns out to be the right one, we'll tell you that too.
         </P>
       </>
     ),
