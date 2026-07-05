@@ -104,7 +104,7 @@ function HowItWorksPage() {
               TV advertising, minus the mystery.
             </h1>
             <p className="mt-6 text-lg text-mojo-mute max-w-2xl leading-relaxed">
-              Five steps, in plain English. What we do, when we do it, and what you'll see back.
+              Five steps, in plain English. What we do. When we do it. And what you'll actually see back inside your own reporting.
             </p>
             <div className="mt-8">
               <Link
