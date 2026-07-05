@@ -11,49 +11,49 @@ const CHANNELS: {
   {
     code: "CH 01",
     eyebrow: "Prime time",
-    title: "The show they sit down for.",
+    title: "The 8 o'clock show",
     body:
-      "The 8pm drama, the Sunday-night lineup, the episode the whole house waits until after dinner to start. That's where your spot lands.",
+      "Somebody in the house picked it, everybody's watching it, and nobody is leaving the couch. Your spot runs in the break, the way TV advertising always worked. The difference is you only pay for the living rooms in your service area.",
     Screen: PrimeTimeScreen,
   },
   {
     code: "CH 02",
-    eyebrow: "Free ad-supported channels",
-    title: "The free channels on every remote.",
+    eyebrow: "Free channels",
+    title: "The free channels on every remote",
     body:
-      "The always-on channels built into every smart TV — one button, no subscription, and more viewing hours every year. Efficient reach in the exact households you pick.",
+      "Every smart TV ships with a few hundred free channels nobody signed up for and everybody watches. Old sitcoms, movie marathons, that one channel that only plays crime documentaries. Hours of viewing every night, in households you can pick by zip code.",
     Screen: FreeChannelsScreen,
   },
   {
     code: "CH 03",
     eyebrow: "News",
-    title: "Morning coffee, evening wrap.",
+    title: "News in the background",
     body:
-      "Local and national news streams that run in the background from the first pot of coffee to the closing headlines. For lawyers, doctors, and dealers, it's the frequency that makes a name feel established.",
+      "Morning news while the coffee's going. The evening wrap while dinner gets made. It runs every single day, and that's exactly why it works: a lawyer or a dentist who shows up next to the news for six months starts to feel like an institution.",
     Screen: NewsScreen,
   },
   {
     code: "CH 04",
     eyebrow: "Lifestyle",
-    title: "Kitchen on, TV on.",
+    title: "Cooking shows and kitchen remodels",
     body:
-      "Food, home, and lifestyle programming that plays while dinner is cooking and the family is half-watching from the counter. If you fix, build, or remodel homes, this is your customer — watching someone else do it.",
+      "There is an entire universe of people who spend their evenings watching other people renovate bathrooms. If you fix or remodel homes for a living, they're already sold on the work. They just don't have your number yet.",
     Screen: LifestyleScreen,
   },
   {
     code: "CH 05",
     eyebrow: "Movies",
-    title: "Friday-night feature.",
+    title: "Friday night at home",
     body:
-      "Ad-supported movie nights on the big streaming apps — two hours settled in on the couch, your spot in the breaks.",
+      "Movie night moved to the couch years ago. The free-with-ads apps run everything from last year's big releases to the comfort movies people rewatch forever, and your thirty seconds sits right in the intermission.",
     Screen: MoviesScreen,
   },
   {
     code: "CH 06",
     eyebrow: "YouTube on the TV",
-    title: "The big screen, the biggest library.",
+    title: "YouTube, but on the television",
     body:
-      "Long-form YouTube watched in the living room, on the actual television. The biggest screen in the house running the biggest video library on earth.",
+      "The kids put it on the TV and it never left. Car reviews, home tours, hour-long deep dives on anything. It's the most-watched app in the living room, and it's bought separately from everything above, which is why most local shops skip it. We don't.",
     Screen: YouTubeTVScreen,
   },
 ];

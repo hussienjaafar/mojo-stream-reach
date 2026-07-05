@@ -237,13 +237,13 @@ function HomePage() {
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
             <div className="text-xs uppercase tracking-[0.22em] text-mojo-clay-deep font-medium">
-              Where your ad runs
+              WHERE YOUR AD RUNS
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-mojo-ink leading-[1.1]">
               And that's just game day.
             </h2>
             <p className="mt-6 text-mojo-ink/85 text-lg leading-relaxed max-w-xl">
-              The average living room streams four hours a night. The game is one hour of it.
+              The average living room streams about four hours a night. The game takes up one of them. Here's the rest of the evening.
             </p>
           </div>
 
@@ -253,7 +253,7 @@ function HomePage() {
 
           <div className="mt-16 max-w-2xl">
             <p className="text-mojo-ink/85 text-lg leading-relaxed">
-              One campaign can run across all of it — weighted toward wherever your customers actually spend their evenings.
+              One campaign spreads across all of it, weighted to wherever your customers actually spend their evenings. A roofer's mix doesn't look like a dentist's.
             </p>
             <p className="mt-3 text-xs text-mojo-mute">
               Placement mix varies by market, season, and budget.
