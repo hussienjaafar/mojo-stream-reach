@@ -268,7 +268,7 @@ function HomePage() {
               We don't sell you our inventory. We buy you the right inventory.
             </h2>
             <p className="mt-6 text-mojo-mute text-lg leading-relaxed">
-              Most TV sellers are tied to a station or a network — they win when they move their own bundle. We work the other way around.
+              Most TV sellers are tied to a station or a network, which means they win when they move their own bundle. We work the other way around. Your goal drives the buy, and the buy goes wherever your customer actually is.
             </p>
           </div>
 
