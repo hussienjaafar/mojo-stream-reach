@@ -70,6 +70,22 @@ const posts: Record<string, PostContent> = {
           Four things move the price more than anything else. Geography is the first: tight targeting to a handful of zip codes costs more per impression than a county-wide buy, because you're paying for precision. Inventory is the second: a live weekend game is not the same product as a late-night rerun on a free-with-ads streaming app. Season is the third: Q4 is expensive because every retailer in America is bidding on the same living rooms at the same time. Creative length rounds it out. Thirty-second spots cost more than fifteens, and the difference isn't always worth it depending on your goal.
         </P>
 
+        <H2>What makes CPMs go up?</H2>
+<P>
+          Scarcity is the honest one-word answer. When a single live weekend game concentrates a huge chunk of a market's attention into a three-hour window, everyone who wants those living rooms bids for the same slots at the same time. Add competitive dayparts around holidays, add advertisers with fresh Q4 budgets, and CPMs climb. Narrow geo targeting compounds the effect, because a small target audience inside a hot inventory window is the most expensive combination on the board.
+</P>
+<P>
+          What pulls the number down is the opposite: broad geography, ordinary weeknight inventory, and off-peak seasons. The same $10,000 flight can reach very different households depending on when you press go. A media plan built around your actual sales calendar will spend into the expensive windows only when they line up with your best selling moments — and skip them the rest of the year.
+</P>
+
+<H2>What does a good month one look like?</H2>
+<P>
+          A healthy first month has a rhythm to it. Week one is the kickoff call, the creative brief, and a script draft. Week two is production — usually a single day on your site. Week three is the final cut, sign-off, and the media plan itemized down to the zip-code map and every fee in the stack. By the end of week four, the campaign is live and the first pacing report is on your desk with plain-English notes attached.
+</P>
+<P>
+          What you should not expect in month one is a full read on results. Brand-search lift and call-volume signal need frequency and a baseline period behind them. Anyone promising you a clean ROAS number after thirty days on TV is measuring correlations, not causes. The right expectation for the first month is a working campaign, honest pacing, and the reporting infrastructure ready for month two through month six to actually tell you something.
+</P>
+
         <H2>What should a real program cost?</H2>
         <P>
           For a mid-market business in Michigan, a serious streaming TV program usually starts around $6,000 to $10,000 per month in working media, plus a transparent management fee. Below that, you can't build enough frequency across your zip codes to see brand-search actually lift. Above it, you scale by adding markets, dayparts, or live-sports adjacencies — not by spraying the same household harder and hoping something changes.
@@ -127,6 +143,19 @@ const posts: Record<string, PostContent> = {
           When someone tells you their platform "proves ROAS," ask exactly how the incrementality was measured. If the answer is "our attribution model," you have a modelled number rather than a measured one. Both have a place, but they are very different things. Confuse them and you'll spend real money on a report that only ever tells you what you already believed.
         </P>
 
+        <H2>Who self-serve actually is right for</H2>
+<P>
+          There's a real profile of buyer who should ignore everything above and go straight to a self-serve platform. The performance marketer at a direct-to-consumer brand with a mature creative library, a data team, and a mandate to test TV as a channel — that person will get more out of a self-serve buy than an agency retainer. The tooling was built for them. They already have the incrementality methodology, the pixel infrastructure, and the internal appetite to fail publicly for two quarters before something works.
+</P>
+<P>
+          The mismatch happens when a mid-market operator — the plumbing group owner, the managing partner, the dealer principal — reads the same landing page and assumes it was written for them. It wasn't. What looks like simplicity is really a set of skilled decisions the platform expects you to make on your own. When those decisions land on somebody whose job is running a business rather than optimizing a media stack, the outcomes usually reflect it.
+</P>
+
+<H2>Questions to ask before you sign up for one</H2>
+<P>
+          Whether you go self-serve or hire a buyer, ask the same short list up front. What is my actual working CPM after the platform's margin? Which specific apps and content categories will my spot run against? How do I exclude the ones I don't want, and how quickly can I make that change? What baseline period do you recommend before launch, and what conversion signal are we using to measure lift? If the answers are vague, the reporting will be vague too, and that vagueness will cost you real money on the back end.
+</P>
+
         <H2>When self-serve is fine, and when it isn't</H2>
         <P>
           If you have a strong in-house creative team, a media analyst who lives in dashboards all day, and a budget you're comfortable spending as tuition, self-serve platforms are a reasonable place to learn. If you're a mid-market operator whose day is already spent running a company, self-serve is a slow way to spend real money on the wrong impressions.
@@ -183,6 +212,19 @@ const posts: Record<string, PostContent> = {
         <H2>When to hold off</H2>
         <P>
           Hold off when streaming is going to be the majority of your intended TV budget. Hold off when you want tight zip-code targeting across multiple premium apps. Hold off when you need live-sports inventory beyond what the station itself carries. Hold off when you can't get a fee-transparent breakdown of the CPM for the streaming portion, separated from anything linear. Any one of those alone means the station package is probably not the right home for that dollar.
+        </P>
+
+        <H2>Questions to ask the station rep before signing</H2>
+        <P>
+          Push on the specifics before the ink dries. Which exact apps and content publishers is my spot going to run on, itemized, not "our premium OTT bundle"? What is the working CPM for the streaming portion alone, after your margin and any resold-platform fees are pulled out? Can I get zip-code-level targeting inside the station's OTT app, or only DMA-level? What does the report look like at month three, and does it separate the streaming impressions from the linear ones?
+        </P>
+        <P>
+          If any of those answers arrive as "we'll have to check" or "it's included in the package," treat it as data. It usually means the streaming layer was assembled by a partner the station itself doesn't fully control. That's fine as a product, but you should know it's what you're buying — and price the trade-off accordingly.
+        </P>
+
+        <H2>Where independent buyers actually add value</H2>
+        <P>
+          An independent buyer isn't automatically the right answer either. What we add is the ability to move budget across publishers without losing anything on our own side, and the discipline to walk away from a plan that doesn't fit. If the right buy for your market this quarter is 70% station streaming and 30% dedicated CTV, that's what we'll build. If it's the opposite, we'll build that instead. The buy follows your customer, and nothing on our shelf needs to move for us to eat.
         </P>
 
         <H2>How to compare the two proposals fairly</H2>

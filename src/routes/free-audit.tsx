@@ -117,7 +117,7 @@ function FreeAuditPage() {
               What you get
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-4xl text-mojo-ink leading-tight">
-              Written for you. Not a template.
+              Written for your market, from scratch.
             </h2>
             <ul className="mt-8 space-y-4">
               {includes.map((item) => (

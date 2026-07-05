@@ -5,7 +5,7 @@ import { pageHead, faqJsonLd, serviceJsonLd } from "@/lib/seo";
 const PATH = "/industries/legal";
 const TITLE = "Streaming TV Advertising for Law Firms | Mojo";
 const DESCRIPTION =
-  "Streaming TV advertising for Michigan law firms — county-level targeting, bar-compliant creative, and measurement tied to real intake, not impressions.";
+  "Streaming TV advertising for Michigan law firms — county-level targeting, bar-compliant creative, and measurement tied to real intake volume.";
 
 const faqs = [
   {

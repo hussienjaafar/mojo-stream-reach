@@ -39,7 +39,7 @@ const steps = [
     n: "03",
     title: "We show you what happened",
     body:
-      "The phone ringing. Walk-ins on Saturday. Branded search climbing week over week — all of it tied back to the flights that ran. Not vanity impressions.",
+      "The phone ringing. Walk-ins on Saturday. Branded search climbing week over week — all of it tied back to the flights that ran.",
   },
 ];
 
